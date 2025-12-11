@@ -8,10 +8,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<Meta
-		title="FOB"
-		description="Loving story driven content, and new ways to explore data... @threejjjs Interactive Tech - Amazing UX/UI experiences"
-	/>
+	<Meta />
 </svelte:head>
 
 {@render children()}

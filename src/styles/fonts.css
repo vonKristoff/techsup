@@ -1,9 +1,11 @@
 :root {
-  --font-noto: "Noto Serif", serif;
-  --font-roboto: "Roboto", sans-serif;
+	--font-amsterdam: 'New Amsterdam', sans-serif;
+	--font-roboto: 'Roboto', serif;
+	--font-bangers: 'Bangers';
 }
 
 @theme {
-  --font-primary: var(--font-noto);
-  --font-secondary: var(--font-roboto);
+	--font-primary: var(--font-amsterdam);
+	--font-secondary: var(--font-roboto);
+	--font-tertiary: var(--font-bangers);
 }

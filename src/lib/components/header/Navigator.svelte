@@ -13,7 +13,10 @@ class:darken={global.ambience === 'darken'} -->
 >
 	<aside class="shrink-0"></aside>
 	<nav class="grow">
-		<div class="flex justify-center">TABLE TOP GAMES MAKERS</div>
+		<div class="flex gap-2 justify-center">
+			<div class="flex justify-center">TABLE TOP GAMES MAKERS</div>
+			<!-- <Icon ctx="lazer" weight=".75em" /> -->
+		</div>
 	</nav>
 	<aside class="shrink-0">
 		<button onclick={() => modal?.showModal()}><Icon ctx="menu"></Icon></button>
