@@ -10,14 +10,14 @@
 	<!-- Open Graph for social media -->
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
-	<meta property="og:image" content="{url}/meta.jpg" />
+	<meta property="og:image" content="{url}/techsup.jpg" />
 	<meta property="og:url" content={url} />
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content="{url}/meta.jpg" />
+	<meta name="twitter:image" content="{url}/techsup.jpg" />
 
 	<!-- Canonical URL -->
 	<link rel="canonical" href={url} />
