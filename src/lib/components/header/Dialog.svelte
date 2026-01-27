@@ -14,23 +14,24 @@
 		<nav class="grid place-content-center font-secondary gap-y-4">
 			<div class="flex gap-4 items-center text-3xl">
 				<Icon ctx="mail" />
-				<a class="link" href="mailto:0xjceee@proton.me">
+				<a class="link" href="mailto:hello@techsup.uk">
 					<span>Send us an email</span>
 				</a>
 			</div>
 		</nav>
 		<div class="flex justify-center">
-			<div class="rounded-lg fob bg-center bg-contain bg-blend-difference max-w-full"></div>
+			<div class="rounded-lg fob bg-center bg-contain bg-blend-overlay max-w-full"></div>
 		</div>
 	</div>
 </dialog>
 
 <style>
 	.fob {
-		background-color: #003c2b;
+		background-color: var(--hue-4);
+		/* background-color: #003c2b; */
 		width: 100%;
 		height: 10em;
-		background-image: url('/fingers.webp');
+		background-image: url('/techsup.jpg');
 		/* background-repeat: no-repeat; */
 	}
 	a:hover,

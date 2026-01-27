@@ -2,11 +2,11 @@
 	class="w-screen grid grid-cols-1 gap-y-16 md:grid-cols-3 py-16 px-8 md:px-16 text-2xl text-primary"
 >
 	<aside class="flex flex-col text-sm justify-end">
-		<span>other links</span>
+		<span>Tech Support! Interactive Ltd.</span>
 	</aside>
 
 	<div class="flex flex-col text-text-200 text-sm justify-end items-center">
-		<div class="fob bg-center bg-cover bg-blend-difference max-w-full"></div>
+		<div class="fob pink bg-primary-200 bg-center bg-cover bg-blend-lighten max-w-full"></div>
 		<span>&copy; {new Date().getFullYear()}. All rights reserved.</span>
 	</div>
 
@@ -22,14 +22,18 @@
 
 <style>
 	footer {
-		background-color: #f0c2d4;
+		color: var(--color-neutral-100);
+		/* background-color: #f0c2d4; */
 	}
 	.fob {
 		background-color: #003c2b;
 		width: 100%;
 		height: 12em;
 		aspect-ratio: 4/3;
-		background-image: url('/fingers.webp');
+		background-image: url('/techsup.jpg');
 		background-repeat: no-repeat;
+	}
+	.pink {
+		background-color: var(--hue-4);
 	}
 </style>

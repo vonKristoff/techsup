@@ -6,7 +6,8 @@
 <Navigator />
 <main class="content-grid">
 	<section class="grid place-content-center w-full h-dvh full-width bg-secondary-200">
-		<div class="hero bg-center bg-cover bg-prime-200 bg-blend-difference max-w-full"></div>
+		<div class="hero bg-center bg-cover bg-secondary-200 bg-blend-lighten max-w-full"></div>
+		<h3 class="text-neutral-200 text-center tracking-wider">who ya gonna call?</h3>
 	</section>
 	<section class="full-width content-grid bg-prime-200 py-16">
 		<div class="breakout flex flex-col gap-12">
@@ -18,7 +19,7 @@
 			<div class="flex flex-col text-xl">
 				<p class="">We believe in the power of social gaming, and leaving the metaverse at home.</p>
 				<p>
-					<span class="font-tertiary">Lazerpong</span> is proudly our first game, and it will be of many
+					<span class="font-tertiary">Koleider</span> is proudly our first game, and it will be of many
 					as we begin on our quest to fill up our own arcade.
 				</p>
 			</div>
@@ -90,9 +91,12 @@
 <style>
 	.hero {
 		max-height: 70dvh;
-		aspect-ratio: 4/3;
+		aspect-ratio: 5/3;
 		width: 100vw;
-		background-image: url('/fingers.webp');
+		background-image: url('/techsup.jpg');
 		background-repeat: no-repeat;
+		@media (min-width: 768px) {
+			aspect-ratio: 4/3;
+		}
 	}
 </style>
