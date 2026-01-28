@@ -5,7 +5,7 @@
 
 <Navigator />
 <main class="content-grid">
-	<section class="grid place-content-center w-full h-dvh full-width bg-secondary-200">
+	<section class="grid place-content-center full-width h-dvh bg-secondary-200">
 		<div class="hero bg-center bg-cover bg-secondary-200 bg-blend-lighten max-w-full"></div>
 		<h3 class="text-neutral-200 text-center tracking-wider">who ya gonna call?</h3>
 	</section>
@@ -61,7 +61,7 @@
 		<div class="flex flex-col items-center">
 			<div class="flex text-8xl">
 				<Icon ctx="zap" />
-				<h3 class="font-tertiary text-8xl">LEADERBOARD IN THE SKY</h3>
+				<h3 class="font-tertiary text-6xl md:text-8xl">LEADERBOARD IN THE SKY</h3>
 			</div>
 			<p class="text-2xl">ENHANCING WITH METRICS AND GAME APP</p>
 			<p class="text-center">
@@ -70,7 +70,7 @@
 		</div>
 		<div class="content-grid">
 			<div class="breakout flex flex-col">
-				<div class="flex justify-center mt-0 my-8 gap-12 [&>h4]:text-4xl">
+				<div class="flex flex-col md:flex-row justify-center mt-0 my-8 md:gap-12 [&>h4]:text-4xl">
 					<h4>Payment Gateway</h4>
 					<h4>Game App</h4>
 					<h4>Play Metrics</h4>

@@ -9,7 +9,7 @@
 class:darken={global.ambience === 'darken'} -->
 
 <header
-	class="flex fixed top-0 w-full p-8 text-2xl md:text-4xl backdrop-blur-2xl z-10 text-prime-200"
+	class="flex items-center fixed top-0 w-full p-8 text-2xl md:text-4xl backdrop-blur-2xl z-10 text-prime-200"
 >
 	<aside class="shrink-0"></aside>
 	<nav class="grow">
@@ -18,7 +18,7 @@ class:darken={global.ambience === 'darken'} -->
 			<!-- <Icon ctx="lazer" weight=".75em" /> -->
 		</div>
 	</nav>
-	<aside class="shrink-0">
+	<aside class="shrink-0 flex items-center">
 		<button onclick={() => modal?.showModal()}><Icon ctx="menu"></Icon></button>
 	</aside>
 </header>

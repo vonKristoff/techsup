@@ -1,12 +1,14 @@
 <footer
-	class="w-screen grid grid-cols-1 gap-y-16 md:grid-cols-3 py-16 px-8 md:px-16 text-2xl text-primary"
+	class="w-full grid grid-cols-1 gap-y-16 md:grid-cols-3 py-16 px-8 md:px-16 text-2xl text-primary"
 >
 	<aside class="flex flex-col text-sm justify-end">
 		<span>Tech Support! Interactive Ltd.</span>
 	</aside>
 
 	<div class="flex flex-col text-text-200 text-sm justify-end items-center">
-		<div class="fob pink bg-primary-200 bg-center bg-cover bg-blend-lighten max-w-full"></div>
+		<div
+			class="fob pink bg-primary-200 bg-center bg-cover bg-blend-lighten max-w-full border-4 rounded-2xl border-white md:border-transparent md:my-0 my-4"
+		></div>
 		<span>&copy; {new Date().getFullYear()}. All rights reserved.</span>
 	</div>
 
