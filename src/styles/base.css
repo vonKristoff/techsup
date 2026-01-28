@@ -6,14 +6,16 @@
 }
 
 @layer base {
+	html,
+	body {
+		overflow-x: hidden;
+	}
 	body {
 		@apply text-secondary-200;
 		@apply font-secondary;
 		@apply bg-primary;
-		text-align: left;
 		word-wrap: break-word;
 		overflow-wrap: break-word;
-		overflow-x: hidden;
 	}
 }
 

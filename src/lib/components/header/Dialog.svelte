@@ -55,11 +55,11 @@
 		dialog[open] {
 			opacity: 0;
 			transform: translate(-50%, -25%);
-			overflow: hidden;
 		}
 	}
 	dialog:not([open]) {
 		opacity: 0;
+		position: fixed;
 		transform: translate(-50%, -150%);
 	}
 
