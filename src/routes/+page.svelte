@@ -32,7 +32,7 @@
 			class="hero bg-center bg-cover bg-secondary-200 bg-blend-lighten max-w-full"
 		></div>
 		<div class="flex justify-center">
-			<h3 class="font-tertiary text-prime-200 inline-block text-center tracking-wider">
+			<h3 class="absolute font-tertiary text-prime-200 inline-block text-center tracking-wider">
 				who ya gonna call?
 			</h3>
 		</div>
