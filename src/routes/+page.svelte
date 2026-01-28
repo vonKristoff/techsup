@@ -1,13 +1,41 @@
 <script>
 	import Navigator from '$lib/components/header/Navigator.svelte';
 	import Icon from '$lib/components/Icon.svelte';
+	import { onMount } from 'svelte';
+
+	let hasLoaded = $state(false);
+	onMount(() => {
+		const hero = new Image();
+		hero.onload = () => (hasLoaded = true);
+		hero.src = '/techsup.jpg';
+	});
+	function intersection(el) {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.intersectionRatio >= 0.5) el.classList.add('show');
+					if (entry.intersectionRatio === 0) el.classList.remove('show');
+				});
+			},
+			{ threshold: [0, 0.5, 1] }
+		);
+		observer.observe(el);
+	}
 </script>
 
 <Navigator />
 <main class="content-grid">
 	<section class="grid place-content-center full-width h-dvh bg-secondary-200">
-		<div class="hero bg-center bg-cover bg-secondary-200 bg-blend-lighten max-w-full"></div>
-		<h3 class="text-neutral-200 text-center tracking-wider">who ya gonna call?</h3>
+		<div
+			use:intersection
+			class:show={hasLoaded}
+			class="hero bg-center bg-cover bg-secondary-200 bg-blend-lighten max-w-full"
+		></div>
+		<div class="flex justify-center">
+			<h3 class="font-tertiary text-prime-200 inline-block text-center tracking-wider">
+				who ya gonna call?
+			</h3>
+		</div>
 	</section>
 	<section class="full-width content-grid bg-prime-200 py-16">
 		<div class="breakout flex flex-col gap-12">
@@ -89,14 +117,35 @@
 </main>
 
 <style>
+	.hero.show {
+		background-image: url('/techsup.jpg');
+		opacity: 1;
+		filter: blur(0);
+		transform: rotate(0deg) scale(1);
+	}
 	.hero {
+		transition:
+			opacity 0.3s ease 0s,
+			filter 0.3s ease 0.2s,
+			transform 0.3s ease 0.2s;
+		transform: rotate(360deg) scale(0.25);
+		transform-origin: center;
+		opacity: 0;
+		filter: blur(1em);
 		max-height: 70dvh;
 		aspect-ratio: 5/3;
 		width: 100vw;
-		background-image: url('/techsup.jpg');
 		background-repeat: no-repeat;
 		@media (min-width: 768px) {
 			aspect-ratio: 4/3;
 		}
+	}
+	.rainbow {
+		background: linear-gradient(to right, red, orange, yellow, green, rgb(93, 93, 242), violet);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		/* font-size: 2rem; */
+		/* font-weight: bold; */
 	}
 </style>
