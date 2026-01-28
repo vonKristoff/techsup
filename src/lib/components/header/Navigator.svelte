@@ -22,6 +22,7 @@ class:darken={global.ambience === 'darken'} -->
 		<button onclick={() => modal?.showModal()}><Icon ctx="menu"></Icon></button>
 	</aside>
 </header>
+
 <Dialog bind:modalRef={modal} />
 
 <style>

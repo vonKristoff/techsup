@@ -40,6 +40,7 @@
 		color: black;
 	}
 	dialog {
+		inset: 0;
 		transform: translate(-50%, -50%);
 		top: 50%;
 		left: 50%;
@@ -54,6 +55,7 @@
 		dialog[open] {
 			opacity: 0;
 			transform: translate(-50%, -25%);
+			overflow: hidden;
 		}
 	}
 	dialog:not([open]) {
