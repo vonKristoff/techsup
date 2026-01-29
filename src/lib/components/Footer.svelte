@@ -14,10 +14,12 @@
 
 	<aside class="flex flex-col text-right text-text-200 text-sm justify-end">
 		<span>Built by</span>
-		<h5 class="text-right text-text-200 text-xl md:text-3xl font-primary m-0">
-			three<span class="text-secondary-200">jjj</span>s
-			<br />
-		</h5>
+		<a href="https://threejjjs.xyz">
+			<h5 class="text-right text-text-200 text-xl md:text-3xl font-primary m-0">
+				three<span class="text-secondary-200">jjj</span>s
+				<br />
+			</h5>
+		</a>
 		<span class="text-secondary-200 text-xs">Interactive Tech</span>
 	</aside>
 </footer>
