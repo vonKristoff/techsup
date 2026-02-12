@@ -1,10 +1,9 @@
 <script>
 	import Navigator from '$lib/components/header/Navigator.svelte';
 	import Icon from '$lib/components/Icon.svelte';
-	import { onMount } from 'svelte';
 
 	let hasLoaded = $state(false);
-	onMount(() => {
+	$effect(() => {
 		const hero = new Image();
 		hero.onload = () => (hasLoaded = true);
 		hero.src = '/techsup.jpg';
@@ -25,16 +24,28 @@
 
 <Navigator />
 <main class="content-grid">
-	<section class="grid place-content-center full-width h-dvh bg-secondary-200">
+	<section
+		class="relative grid place-content-center full-width h-dvh bg-secondary-200 overflow-clip"
+	>
 		<div
 			use:intersection
 			class:show={hasLoaded}
 			class="hero bg-center bg-cover bg-secondary-200 bg-blend-lighten max-w-full"
 		></div>
-		<div class="flex justify-center">
-			<h3 class="absolute font-tertiary text-prime-200 inline-block text-center tracking-wider">
-				who ya gonna call?
+		<div class="flex justify-end content-grid absolute bottom-24 w-full">
+			<h3
+				class="text-6xl breakout text-right font-tertiary text-prime-200 inline-block tracking-wider"
+			>
+				making fun. irl.
 			</h3>
+		</div>
+	</section>
+	<section class="full-width content-grid bg-secondary-200 py-16">
+		<div class="breakout text-prime-200 text-xl font-light">
+			<p>
+				Our guiding light is fun that's social: shared, physical, human. It should all bring us
+				together, help us connect, and amplify the things we all have in common, however unique.
+			</p>
 		</div>
 	</section>
 	<section class="full-width content-grid bg-prime-200 py-16">
