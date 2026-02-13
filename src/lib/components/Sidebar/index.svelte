@@ -57,7 +57,7 @@
 </script>
 
 <aside bind:this={asideElement} data-active={global.sidebar} class="element inset-0">
-	<div class="koltop py-12 pt-24">
+	<div class="koltop py-16 pt-32">
 		<svg
 			class="custom-drop"
 			width="100%"
@@ -89,9 +89,6 @@
 	<div class:show={isComplete} class="kolbot">
 		<img src="techsup.jpg" alt="Tech Support!" />
 	</div>
-	<!-- <button class="fixed bottom-12 bg-black z-1">
-		<Icon ctx="x" colour="white" />
-	</button> -->
 </aside>
 
 <style>
@@ -165,6 +162,8 @@
 		width: 100%;
 		background-color: whitesmoke;
 		z-index: -1;
+		border-color: #000;
+		border-right: 0.25em solid;
 		@media (min-width: 768px) {
 			width: 768px;
 		}

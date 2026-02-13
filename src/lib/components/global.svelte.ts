@@ -3,6 +3,7 @@ function store() {
 	let dropdown = $state(false);
 	let ambience = $state();
 	let skew = $state(0);
+	let modal = $state<HTMLDialogElement>();
 	return {
 		setAmbience(value: 'dark' | 'light') {
 			ambience = value === 'light' ? 'lighten' : 'darken';
@@ -16,6 +17,9 @@ function store() {
 		toggleDropdown() {
 			dropdown = !dropdown;
 		},
+		setModal(el: HTMLDialogElement) {
+			modal = el;
+		},
 		get sidebar() {
 			return sidebar;
 		},
@@ -27,6 +31,9 @@ function store() {
 		},
 		get skew() {
 			return `${skew}deg`;
+		},
+		get modal() {
+			return modal;
 		}
 	};
 }

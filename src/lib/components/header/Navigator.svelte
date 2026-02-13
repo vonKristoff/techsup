@@ -4,6 +4,7 @@
 	import Hotline from './Hotline.svelte';
 	import Dialog from './Dialog.svelte';
 	let modal = $state<HTMLDialogElement>();
+	$effect(() => global.setModal(modal));
 </script>
 
 <header
@@ -14,7 +15,7 @@
 >
 	<aside class="shrink-0 text-lg md:text-xl lg:text-2xl relative z-10">
 		<button
-			class="hover:text-wash-200 transition-all hover:translate-x-1"
+			class="hover:text-wash-200 transition-all hover:translate-x-1 border-2 px-4 rounded-lg py-1"
 			onclick={() => global.toggleSidebar()}>KOLEIDAR</button
 		>
 		<!-- <Icon ctx="lazer" weight=".75em" /> -->
@@ -26,7 +27,7 @@
 			<div class="flex justify-center">TABLE TOP GAMES MAKERS</div>
 		</div>
 	</nav>
-	<aside class="shrink-0 flex items-center text-lg md:text-xl lg:text-2xl">
+	<aside class="shrink-0 flex items-center text-lg md:text-xl lg:text-2xl px-2 py-2">
 		<Hotline modalRef={modal} />
 		<!-- <button onclick={() => modal?.showModal()}><Icon ctx="menu"></Icon></button> -->
 	</aside>

@@ -36,7 +36,7 @@
 <Sidebar />
 <main>
 	<Section bg="light" style="h-dvh relative">
-		<div class="full-width overflow-clip grid place-content-center">
+		<div class="full-width overflow-clip grid place-content-center h-[80vh]">
 			<div
 				use:intersection
 				class:show={hasLoaded}
@@ -62,17 +62,25 @@
 		<div class="breakout text-xl font-light">
 			<p>
 				Lucky for us, it's a rivalry straining with explosive potential. What does that mean? It
-				means we're priming <strong>ka-booms:</strong> games that fuse the best use of what we love in
-				ways that bring us together. Accessible, tactile, and, most importantly, screen-less.
+				means we're priming 💥 <strong>ka-booms:</strong> games that fuse the best use of what we love
+				in ways that bring us together. Accessible, tactile, and, most importantly, screen-less.
 			</p>
 		</div>
 	</Section>
 	<Section bg="light">
+		<!-- <div class="grid grid-cols-3 full-width overflow-hidden"> -->
+		<!-- <div class="col">
+				<Icon ctx="test1" colour="pink" />
+			</div> -->
 		<div class="flex flex-col text-8xl font-primary px-8">
 			<span>IMMEDIATE.</span>
 			<span>TACTILE.</span>
 			<span>SCREEN-LESS.</span>
 		</div>
+		<!-- <div class="col h-screen absolute">
+				<Icon ctx="test2" size="100em" weight="1em" colour="pink" />
+			</div> -->
+		<!-- </div> -->
 	</Section>
 
 	<Section bg="dark">
@@ -93,7 +101,11 @@
 		<div class="flex flex-col gap-4 px-8">
 			<p class="text-center font-bold text-3xl">Kickstarter launching April 30th</p>
 			<div class="flex flex-row justify-between">
-				<button class="bg-secondary-200 py-2 px-8 rounded-lg text-prime-200">Visit campaign</button>
+				<button
+					data-hover="Coming soon"
+					class="inline-button bg-secondary-200 py-2 px-8 rounded-lg text-prime-200"
+					><span>Visit campaign</span></button
+				>
 				<div class="flex flex-row items-center gap-2">
 					<svg width="2em" height="2em">
 						<circle cx="1em" cy="1em" r="0.75em" fill="#003727" />
@@ -105,7 +117,10 @@
 						<circle cx="1em" cy="1em" r="0.75em" fill="#003727" />
 					</svg>
 				</div>
-				<button class="border-2 rounded-lg py-2 px-8">Connect to hotline</button>
+				<button
+					onclick={() => global.modal?.showModal()}
+					class="inline-button border-2 rounded-lg py-2 px-8">Connect to hotline</button
+				>
 			</div>
 		</div>
 	</Section>
@@ -118,8 +133,57 @@
 		</div>
 	</Section>
 </main>
+<button
+	data-action="close-chat"
+	onclick={() => global.toggleSidebar()}
+	class="fixed bg-black z-1 border-2 border-white drop-shadow-2xl"
+>
+	<Icon ctx="x" colour="white" />
+</button>
 
 <style>
+	button.inline-button {
+		transition: all 0.3s;
+		overflow: clip;
+		span {
+			transition: all 0.3s;
+			display: inline-block;
+		}
+	}
+	button.inline-button:hover {
+		transform: translateY(-10%);
+		box-shadow: 0 0.25em 0.2em var(--color-wash-200);
+		position: relative;
+	}
+	button[data-hover='Coming soon'] {
+		&::before {
+			transition: all 0.3s;
+			position: absolute;
+			content: 'Coming soon!';
+			transform: translateY(-150%);
+		}
+	}
+	button[data-hover='Coming soon']:hover {
+		&::before {
+			transform: translateY(0%);
+		}
+		span {
+			transform: translateY(150%);
+		}
+	}
+	[data-action='close-chat'] {
+		transition: all 0.125s ease-in;
+		bottom: -2em;
+		font-size: 2em;
+		border-radius: 50%;
+		padding: 0.25em;
+		transform: translateX(-50%);
+		left: 50%;
+		opacity: 0;
+		@media (min-width: 768px) {
+			left: calc(768px / 2);
+		}
+	}
 	.hero.show {
 		background-image: url('/techsup.jpg');
 		opacity: 1;
@@ -154,5 +218,15 @@
 
 	main {
 		transition: transform 0.2s ease-in;
+		&::after {
+			transition: transform 0.2s ease-in;
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: var(--color-wash-200);
+			inset: 0;
+			transform: translateX(100%);
+		}
 	}
 </style>

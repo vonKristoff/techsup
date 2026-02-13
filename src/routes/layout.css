@@ -16,3 +16,12 @@ aside[data-active='true'] + main {
 		transform: translateX(768px);
 	}
 }
+aside[data-active='true'] ~ button[data-action] {
+	bottom: 1.25em;
+	opacity: 1;
+}
+aside[data-active='true'] + main::after {
+	transform: translateX(0);
+	backdrop-filter: blur(1em);
+	opacity: 0.5;
+}
