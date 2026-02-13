@@ -5,31 +5,36 @@
 </script>
 
 <dialog bind:this={modalRef} class="shadow-xl rounded-2xl fixed overflow-hidden">
-	<div class="modal rainbow flex flex-col justify-between gap-12">
-		<div class="rounded-lg fob bg-center bg-contain bg-blend-overlay max-w-full"></div>
-		<div class="p-4 grid place-content-center h-full w-full">
-			<!-- <div class="rounded-lg fob bg-center bg-contain bg-blend-screen max-w-full"></div> -->
-			<!-- <div class="flex justify-end">
-				<button onclick={() => modalRef.close()} class="p-2 text-3xl">
-					<Icon ctx="x" />
-				</button>
-			</div> -->
-			<h2 class="text-6xl text-red-500 text-center text-shadow-2xs">☎️ HOTLINE</h2>
-			<nav class="grid place-content-center font-secondary gap-y-4 text-secondary-200">
-				<!-- <p class="text-2xl text-center">Have enquiries? Talk to us!</p> -->
-				<Subscribe />
-				<div class="flex gap-4 items-center justify-center text-3xl">
+	<div class="modal rainbow flex flex-col justify-between gap-12 p-8">
+		<!-- <div class="rounded-lg fob bg-center bg-contain bg-blend-overlay max-w-full"></div> -->
+		<!-- <div class="p-4 grid place-content-center h-full w-full"> -->
+		<!-- <div class="rounded-lg fob bg-center bg-contain bg-blend-screen max-w-full"></div> -->
+		<div class="flex justify-end">
+			<button
+				onclick={() => modalRef.close()}
+				class="fixed text-2xl bg-black z-1 rounded-full border-2 border-white drop-shadow-2xl p-2"
+			>
+				<Icon ctx="x" colour="white" />
+			</button>
+		</div>
+		<h2 class="text-6xl text-red-500 text-center text-shadow-2xs">☎️ HOTLINE</h2>
+		<nav class="grid place-content-center font-secondary gap-y-4 text-secondary-200">
+			<!-- <p class="text-2xl text-center">Have enquiries? Talk to us!</p> -->
+			<Subscribe>
+				<p class="text-center">Or reach out directly:</p>
+				<div class="flex gap-4 items-center justify-center text-2xl">
 					<Icon ctx="mail" />
 					<a class="link" href="mailto:hello@techsup.uk">
-						<span>Reach out via email</span>
+						<span>Email</span>
 					</a>
 				</div>
-			</nav>
-			<!-- <div class="flex justify-center">
+			</Subscribe>
+		</nav>
+		<!-- <div class="flex justify-center">
 				<div class="rounded-lg fob bg-center bg-contain bg-blend-screen max-w-full"></div>
 				</div> -->
-		</div>
-		<div class="rounded-lg fob bg-center bg-contain bg-blend-overlay max-w-full"></div>
+		<!-- </div> -->
+		<!-- <div class="rounded-lg fob bg-center bg-contain bg-blend-overlay max-w-full"></div> -->
 	</div>
 </dialog>
 

@@ -100,10 +100,10 @@
 		</div>
 		<div class="flex flex-col gap-4 px-8">
 			<p class="text-center font-bold text-3xl">Kickstarter launching April 30th</p>
-			<div class="flex flex-row justify-between">
+			<div class="flex flex-col items-center gap-4 md:flex-row justify-center">
 				<button
 					data-hover="Coming soon"
-					class="inline-button bg-secondary-200 py-2 px-8 rounded-lg text-prime-200"
+					class="inline-button bg-secondary-200 py-4 md:py-2 px-8 rounded-lg text-prime-200"
 					><span>Visit campaign</span></button
 				>
 				<div class="flex flex-row items-center gap-2">
@@ -119,13 +119,14 @@
 				</div>
 				<button
 					onclick={() => global.modal?.showModal()}
-					class="inline-button border-2 rounded-lg py-2 px-8">Connect to hotline</button
+					class="inline-button border-2 py-4 md:py-2 rounded-lg py-2 px-8"
+					>Connect to hotline</button
 				>
 			</div>
 		</div>
 	</Section>
 	<Section bg="light">
-		<div class="breakout text-xl font-light">
+		<div class="breakout text-lg font-light">
 			<p class="text-xl font-light">
 				Our guiding light is fun that's social: shared, physical, human. It should all bring us
 				together, help us connect, and amplify the things we all have in common, however unique.
@@ -218,6 +219,8 @@
 
 	main {
 		transition: transform 0.2s ease-in;
+		overflow-x: hidden;
+		position: relative;
 		&::after {
 			transition: transform 0.2s ease-in;
 			content: '';

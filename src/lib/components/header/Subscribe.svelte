@@ -1,3 +1,7 @@
+<script>
+	let { children } = $props();
+</script>
+
 <div class="content-grid drop-shadow-xl">
 	<article class="grid place-content-center">
 		<div class="subscribe-card rounded-2xl border-2 bg-prime-100 p-12">
@@ -40,6 +44,9 @@
 					<!-- <button class="rounded-md bg-wash-200 p-2" type="submit"> Sign me up </button> -->
 				</div>
 			</form>
+			<div class="mt-12">
+				{@render children()}
+			</div>
 		</div>
 	</article>
 </div>
