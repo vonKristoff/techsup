@@ -4,6 +4,9 @@
 @import './base.css';
 @import './components.css';
 
+body {
+	overflow-x: hidden;
+}
 body:has(dialog[open]) {
 	overflow: hidden;
 }

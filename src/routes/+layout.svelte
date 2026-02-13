@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../styles/index.css';
+	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import Meta from '$lib/layout/meta.svelte';
 	import Footer from '$lib/components/Footer.svelte';

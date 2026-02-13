@@ -1,15 +1,4 @@
 @layer base {
-	/* section > * {
-		@apply p-4;
-		@apply md:p-0;
-	} */
-}
-
-@layer base {
-	html,
-	body {
-		overflow-x: hidden;
-	}
 	body {
 		@apply text-secondary-200;
 		@apply font-secondary;

@@ -5,6 +5,7 @@
 	--hue-4: #a786df;
 	--hue-5: #0e172c;
 	--hue-6: #fffffe;
+	--hue-7: #131225;
 
 	--prime: oklch(from var(--hue-1) l c h);
 	--secondary: oklch(from var(--hue-2) l c h);
@@ -36,9 +37,11 @@
 	--color-neutral-100: oklch(from var(--neutral) calc(l + 0.2) c h);
 	--color-neutral-200: oklch(from var(--neutral) l c h);
 	--color-neutral-300: oklch(from var(--neutral) calc(l - 0.2) c h);
+	--black: var(--hue-7);
 }
 
 @theme {
+	--color-black: var(--black);
 	--color-primary: var(--color-prime-300);
 	/* --color-secondary: var(--color-accent-300); */
 	--color-wash-100: var(--color-wash-100);

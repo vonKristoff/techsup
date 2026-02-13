@@ -1,1 +1,18 @@
-@import 'tailwindcss';
+@import '../styles/index.css';
+
+body:has(aside[data-active='true']) {
+	overflow-y: hidden;
+	footer {
+		transform: translateX(100%);
+		@media (min-width: 768px) {
+			transform: translateX(768px);
+		}
+	}
+}
+
+aside[data-active='true'] + main {
+	transform: translateX(100%);
+	@media (min-width: 768px) {
+		transform: translateX(768px);
+	}
+}

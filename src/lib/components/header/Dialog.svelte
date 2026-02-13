@@ -10,10 +10,10 @@
 				<Icon ctx="x" />
 			</button>
 		</div>
-		<h2 class="text-6xl text-secondary-200 text-center">🎲 Your Go!</h2>
-		<nav class="grid place-content-center font-secondary gap-y-4">
+		<h2 class="text-6xl text-secondary-200 text-center">☎️ HOTLINE</h2>
+		<nav class="grid place-content-center font-secondary gap-y-4 text-secondary-200">
 			<p class="text-2xl text-center">Have enquiries? Talk to us!</p>
-			<div class="flex gap-4 items-center text-3xl">
+			<div class="flex gap-4 items-center justify-center text-3xl">
 				<Icon ctx="mail" />
 				<a class="link" href="mailto:hello@techsup.uk">
 					<span>Send an email</span>
@@ -37,7 +37,10 @@
 	}
 	a:hover,
 	a:focus {
-		color: black;
+		color: var(--color-wash-300);
+	}
+	:global(svg:has(+ a:hover)) {
+		color: var(--color-wash-300);
 	}
 	dialog {
 		inset: 0;
