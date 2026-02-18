@@ -4,6 +4,7 @@
 	import Section from '$lib/components/Section.svelte';
 	import global from '$lib/components/global.svelte';
 	import { Sidebar } from '$lib/components/Sidebar';
+	import { inView } from '$lib/utils/action.InterTranslate.svelte';
 
 	let hasLoaded = $state(false);
 	$effect(() => {
@@ -51,8 +52,37 @@
 			</div>
 		</div>
 	</Section>
+	<Section bg="light" paddingTop={false} img="dooodles.jpg">
+		<div use:inView data-view="translateY" class="breakout text-2xl font-light flex flex-col gap-8">
+			<div
+				class="grid grid-cols-1 lg:grid-cols-2 gap-4 [&>p]:px-6 [&>p]:py-4 [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
+			>
+				<p class="border-2">
+					👋 We are Tech Support! A friendly games studio, local to Walthamstow. Inspired by
+					builders, makers and designers, we are taking an innovative path to bring physical games
+					in combination with a digital element to your table top.
+				</p>
+
+				<p>
+					We love the DIY 🪚 Makers aesthetic, and are taking that forward by blending materials and
+					techniques you might expect from Arcade cabinets, 3D printers, Laser cutters and all that
+					reeks of being hand crafted.
+				</p>
+			</div>
+			<div
+				class="grid grid-cols-2 gap-4 [&>p]:px-6 [&>p]:py-4 [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
+			>
+				<p>
+					With our 📐 Engineering and Design toolsets, fluency in software, we work with local
+					manufacturers to bring quality products, far far away from an AI generated landscape. 🤖
+				</p>
+
+				<p class="self-end border-2">We look forward to hearing from you via the hotline. ☎️</p>
+			</div>
+		</div>
+	</Section>
 	<Section bg="dark">
-		<div class="breakout text-xl font-light">
+		<div class="breakout text-2xl font-light">
 			<p>
 				The only thing to rival our devotion to fun is a lifelong passion for games; video games,
 				arcade games, tabletop games, carnival games...
@@ -61,7 +91,7 @@
 		<span class="font-primary text-4xl md:text-6xl breakout text-center"
 			>IF IT ENDS IN 'GAME' WE'RE IN!</span
 		>
-		<div class="breakout text-xl font-light">
+		<div class="breakout text-2xl font-light">
 			<p>
 				Lucky for us, it's a rivalry straining with explosive potential. What does that mean? It
 				means we're priming 💥 <strong>ka-booms:</strong> games that fuse the best use of what we love
@@ -145,6 +175,9 @@
 </button>
 
 <style>
+	.bg-secondary-wash {
+		background-color: #01372796;
+	}
 	button[data-hover='Coming soon'] {
 		&::before {
 			transition: all 0.3s;
@@ -174,6 +207,7 @@
 			left: calc(768px / 2);
 		}
 	}
+
 	.hero.show {
 		background-image: url('/techsup.jpg');
 		opacity: 1;

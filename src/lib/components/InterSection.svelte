@@ -5,13 +5,17 @@
 	interface Props {
 		children: Snippet;
 		bg: 'dark' | 'light';
+		paddingTop: boolean;
 		style?: string;
+		img?: string;
 		margin?: { top: number; bottom: string; left: number; right: number };
 	}
 	let {
 		children,
+		paddingTop = true,
 		bg,
 		style,
+		img,
 		margin = { top: 0, bottom: '-99%', left: 0, right: 0 }
 	}: Props = $props();
 	let layout = $state<string>('bg-prime-200 text-secondary-200');
@@ -39,11 +43,24 @@
 		observer = new IntersectionObserver(intersectPercent, options);
 		observer.observe(el);
 	});
+	$effect(() => {
+		if (img) {
+			el.style.backgroundImage = `url(${img})`;
+		}
+	});
 </script>
 
 <section
 	bind:this={el}
-	class={`content-grid full-width py-16 flex flex-col gap-12 ${layout} ${style}`}
+	class={`content-grid full-width flex flex-col gap-12 ${layout} ${style} ${paddingTop ? 'py-16' : 'pb-16'}`}
 >
 	{@render children()}
 </section>
+
+<style>
+	section {
+		background-position: center;
+		background-size: contain;
+		background-blend-mode: lighten;
+	}
+</style>
