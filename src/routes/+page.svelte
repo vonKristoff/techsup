@@ -70,7 +70,7 @@
 				</p>
 			</div>
 			<div
-				class="grid grid-cols-2 gap-4 [&>p]:px-6 [&>p]:py-4 [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
+				class="grid grid-cols-1 lg:grid-cols-2 gap-4 [&>p]:px-6 [&>p]:py-4 [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
 			>
 				<p>
 					With our 📐 Engineering and Design toolsets, fluency in software, we work with local
