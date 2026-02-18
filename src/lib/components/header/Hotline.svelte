@@ -9,7 +9,7 @@
 	aria-label="contact"
 	onclick={() => modalRef?.showModal()}
 >
-	<div data-clipper class="flex gap-2 transition-all">
+	<div data-clipper class="flex gap-4 md:gap-2 transition-all">
 		<span class="gradient-text">CONNECT TO HOTLINE</span>
 		<span>☎️</span>
 	</div>
@@ -17,7 +17,7 @@
 
 <style>
 	[data-clipper] {
-		transform: translateX(1em);
+		transform: translateX(1.25em);
 	}
 	.gradient-text {
 		position: relative;

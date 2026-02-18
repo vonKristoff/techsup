@@ -4,8 +4,8 @@
 
 <div class="content-grid drop-shadow-xl">
 	<article class="grid place-content-center">
-		<div class="subscribe-card rounded-2xl border-2 bg-prime-100 p-12">
-			<h2>Register your interest</h2>
+		<div class="subscribe-card rounded-2xl border-2 bg-prime-100 p-6 md:p-12">
+			<h2 class="text-3xl md:text-6xl">Register your interest</h2>
 			<form id="subscribe">
 				<div class="flex flex-col gap-4">
 					<div class="">
@@ -38,13 +38,13 @@
 							/>
 						</div>
 					</div>
-					<button class="inline-button border-2 bg-wash-100 rounded-lg py-2 px-8"
+					<button class="inline-button border-2 bg-wash-100 rounded-lg mt-4 py-2 px-8"
 						>Sign me up!</button
 					>
 					<!-- <button class="rounded-md bg-wash-200 p-2" type="submit"> Sign me up </button> -->
 				</div>
 			</form>
-			<div class="mt-12">
+			<div class="mt-6">
 				{@render children()}
 			</div>
 		</div>

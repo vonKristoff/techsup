@@ -5,10 +5,14 @@
 </script>
 
 <dialog bind:this={modalRef} class="shadow-xl rounded-2xl fixed overflow-hidden">
-	<div class="modal rainbow flex flex-col justify-between gap-12 p-8">
+	<div class="modal rainbow flex flex-col justify-between p-4 md:p-8">
 		<!-- <div class="rounded-lg fob bg-center bg-contain bg-blend-overlay max-w-full"></div> -->
 		<!-- <div class="p-4 grid place-content-center h-full w-full"> -->
 		<!-- <div class="rounded-lg fob bg-center bg-contain bg-blend-screen max-w-full"></div> -->
+		<div
+			class="hidden md:block rounded-lg fob bg-center bg-contain bg-blend-screen max-w-full"
+		></div>
+		<!-- <div class="flex justify-center"></div> -->
 		<div class="flex justify-end">
 			<button
 				onclick={() => modalRef.close()}
@@ -17,23 +21,19 @@
 				<Icon ctx="x" colour="white" />
 			</button>
 		</div>
-		<h2 class="text-6xl text-red-500 text-center text-shadow-2xs">☎️ HOTLINE</h2>
+		<h2 class="text-3xl md:text-6xl mb-0 text-red-500 text-center text-shadow-2xs">☎️ HOTLINE</h2>
 		<nav class="grid place-content-center font-secondary gap-y-4 text-secondary-200">
 			<!-- <p class="text-2xl text-center">Have enquiries? Talk to us!</p> -->
 			<Subscribe>
 				<p class="text-center">Or reach out directly:</p>
-				<div class="flex gap-4 items-center justify-center text-2xl">
+				<div class="flex gap-4 items-center justify-center text-lg md:text-2xl">
 					<Icon ctx="mail" />
 					<a class="link" href="mailto:hello@techsup.uk">
-						<span>Email</span>
+						<span>👋 hello @ techsup.uk</span>
 					</a>
 				</div>
 			</Subscribe>
 		</nav>
-		<!-- <div class="flex justify-center">
-				<div class="rounded-lg fob bg-center bg-contain bg-blend-screen max-w-full"></div>
-				</div> -->
-		<!-- </div> -->
 		<!-- <div class="rounded-lg fob bg-center bg-contain bg-blend-overlay max-w-full"></div> -->
 	</div>
 </dialog>
@@ -48,14 +48,18 @@
 		/* font-weight: bold; */
 	}
 	.fob {
-		/* top: 0; */
-		background-color: var(--hue-4);
+		top: calc(50% - 5em);
+		left: 0;
+		transform-origin: center;
+		transform: rotate(-12deg);
+		/* background-color: var(b); */
+		box-shadow: 0 1em 0.1em red;
 		/* background-color: #003c2b; */
 		width: 100%;
 		height: 10em;
-		/* position: absolute; */
+		position: absolute;
 		background-image: url('/techsup.jpg');
-		background-size: 12em;
+		background-size: 24vh;
 		z-index: 0;
 		/* opacity: 0.0512; */
 		/* background-repeat: no-repeat; */
@@ -95,12 +99,12 @@
 		height: inherit;
 	}
 	.modal {
-		/* padding: 2em; */
 		height: inherit;
 	}
 
 	.modal {
-		gap: 16px;
+		/* gap: 16px; */
+
 		display: flex;
 		flex-direction: column;
 	}

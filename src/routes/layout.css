@@ -9,6 +9,9 @@ body:has(aside[data-active='true']) {
 		}
 	}
 }
+html:has(body aside[data-active='true']) {
+	overflow-y: hidden;
+}
 
 aside[data-active='true'] + main {
 	transform: translateX(100%);

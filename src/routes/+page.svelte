@@ -44,7 +44,7 @@
 			></div>
 			<div class="flex justify-end content-grid absolute bottom-24 w-full">
 				<h3
-					class="text-6xl breakout text-right font-tertiary text-prime-200 inline-block tracking-wider"
+					class="text-3xl md:text-6xl breakout text-right font-tertiary text-prime-200 inline-block tracking-wider"
 				>
 					making fun. irl.
 				</h3>
@@ -58,7 +58,9 @@
 				arcade games, tabletop games, carnival games...
 			</p>
 		</div>
-		<span class="font-primary text-6xl breakout text-center">IF IT ENDS IN 'GAME' WE'RE IN!</span>
+		<span class="font-primary text-4xl md:text-6xl breakout text-center"
+			>IF IT ENDS IN 'GAME' WE'RE IN!</span
+		>
 		<div class="breakout text-xl font-light">
 			<p>
 				Lucky for us, it's a rivalry straining with explosive potential. What does that mean? It
@@ -72,7 +74,7 @@
 		<!-- <div class="col">
 				<Icon ctx="test1" colour="pink" />
 			</div> -->
-		<div class="flex flex-col text-8xl font-primary px-8">
+		<div class="flex flex-col text-6xl md:text-8xl font-primary px-8">
 			<span>IMMEDIATE.</span>
 			<span>TACTILE.</span>
 			<span>SCREEN-LESS.</span>
@@ -143,19 +145,6 @@
 </button>
 
 <style>
-	button.inline-button {
-		transition: all 0.3s;
-		overflow: clip;
-		span {
-			transition: all 0.3s;
-			display: inline-block;
-		}
-	}
-	button.inline-button:hover {
-		transform: translateY(-10%);
-		box-shadow: 0 0.25em 0.2em var(--color-wash-200);
-		position: relative;
-	}
 	button[data-hover='Coming soon'] {
 		&::before {
 			transition: all 0.3s;

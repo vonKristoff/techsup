@@ -32,6 +32,19 @@
 	}
 }
 @layer utilities {
+	button.inline-button {
+		transition: all 0.3s;
+		overflow: clip;
+		span {
+			transition: all 0.3s;
+			display: inline-block;
+		}
+	}
+	button.inline-button:hover {
+		transform: translateY(-10%);
+		box-shadow: 0 0.25em 0.2em var(--color-wash-200);
+		position: relative;
+	}
 	.link,
 	a.link {
 		position: relative;

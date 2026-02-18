@@ -23,8 +23,8 @@
 		"Look, give me one solid detail or I'm never coming back here.",
 		'Okay.',
 		'Thank you.',
-		'Most of it is wood.',
-		'Argh! This chatbot sucks! Someone call-'
+		"Most of it's wood.",
+		'Argh! This chatbot sucks! Someone call:'
 	];
 	function beginChat() {
 		chatIndex = 0;
