@@ -1,7 +1,8 @@
 <footer
 	class="w-full grid grid-cols-1 gap-y-16 md:grid-cols-3 py-16 px-8 md:px-16 text-2xl text-primary"
 >
-	<aside class="flex flex-col text-sm justify-end">
+	<aside class="flex flex-col text-sm justify-between">
+		<a class="link w-fit" href="https://unsubscribe.techsup.uk">Unsubscribe</a>
 		<span>Tech Support! Interactive Ltd.</span>
 	</aside>
 

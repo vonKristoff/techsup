@@ -58,7 +58,7 @@
 	<Section bg="light" paddingTop={false} img="dooodles.jpg">
 		<div use:inView data-view="translateY" class="breakout text-2xl font-light flex flex-col gap-8">
 			<div
-				class="grid grid-cols-1 lg:grid-cols-2 gap-4 [&>p]:px-6 [&>p]:py-4 [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
+				class="grid grid-cols-1 lg:grid-cols-2 gap-4 [&>p]:px-6 [&>p]:py-4 [&>p]:h-max [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
 			>
 				<p class="border-2">
 					👋 We are Tech Support! <br /> A friendly games studio, local to Walthamstow. Inspired by builders,
@@ -76,7 +76,7 @@
 				class="grid grid-cols-1 lg:grid-cols-2 gap-4 [&>p]:px-6 [&>p]:py-4 [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
 			>
 				<p>
-					With our 📐 Engineering and Design toolsets, fluency in software, we work with local
+					With our 📐 engineering and design toolsets, fluency in software, we work with local
 					manufacturers to bring quality products, far far away from an AI generated landscape. 🤖
 				</p>
 

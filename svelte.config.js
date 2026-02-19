@@ -9,16 +9,6 @@ const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
 	preprocess: [vitePreprocess(), mdsvex()],
-	// When Ready for static
-	// 	kit: {
-	//     adapter: adapter({
-	//       pages: "build",
-	//       assets: "build",
-	//       fallback: undefined,
-	//       precompress: false,
-	//       strict: true,
-	//     }),
-	//   },
 	kit: {
 		adapter: isStaging ? netlifyAdapter() : adapter(),
 		experimental: {
