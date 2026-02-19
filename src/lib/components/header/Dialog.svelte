@@ -59,7 +59,7 @@
 		height: 10em;
 		position: absolute;
 		background-image: url('/techsup.jpg');
-		background-size: 24vh;
+		background-size: 22vh;
 		z-index: 0;
 		/* opacity: 0.0512; */
 		/* background-repeat: no-repeat; */

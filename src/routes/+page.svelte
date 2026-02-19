@@ -61,9 +61,9 @@
 				class="grid grid-cols-1 lg:grid-cols-2 gap-4 [&>p]:px-6 [&>p]:py-4 [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
 			>
 				<p class="border-2">
-					👋 We are Tech Support! A friendly games studio, local to Walthamstow. Inspired by
-					builders, makers and designers, we are taking an innovative path to bring physical games
-					in combination with a digital element to your table top.
+					👋 We are Tech Support! <br /> A friendly games studio, local to Walthamstow. Inspired by builders,
+					makers and designers: we are taking an innovative path to bring physical games in combination
+					with a digital element to your table top.
 				</p>
 
 				<p>
@@ -111,12 +111,12 @@
 		</div>
 	</Section>
 
-	<Section bg="dark" style="">
+	<Section bg="dark">
 		{#if !isMobile.current}
 			<div class="full-width relative">
 				<svg
 					class="absolute inset-0 -top-16"
-					use:spiralise={{ numRings: 16, numWaves: 4 }}
+					use:spiralise={{ numRings: 16, numWaves: 5 }}
 					width="100%"
 					height="100dvh"
 				></svg>
@@ -126,7 +126,7 @@
 			<p class="font-light text-4xl text-center">Proudly introducing late 2026</p>
 			<p class="text-center font-light italic text-xl">Pong but with lazers.</p>
 			<svg
-				class="custom-drop relative"
+				class="custom-drop"
 				width="100%"
 				height="50vh"
 				fill="#003727"
@@ -144,8 +144,8 @@
 				></svg>
 			{/if}
 		</div>
-		<div class="flex flex-col gap-4 px-8">
-			<p class="text-center font-bold text-3xl">Kickstarter launching April 30th</p>
+		<div class="flex flex-col gap-4 px-8 relative">
+			<p class="text-center font-bold text-3xl">Kickstarter launching 🔜 TBC</p>
 			<div class="flex flex-col items-center gap-4 md:flex-row justify-center">
 				<button
 					data-hover="Coming soon"

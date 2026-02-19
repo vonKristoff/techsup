@@ -59,6 +59,7 @@
 
 <style>
 	section {
+		isolation: isolate;
 		background-position: center;
 		background-size: contain;
 		background-blend-mode: lighten;

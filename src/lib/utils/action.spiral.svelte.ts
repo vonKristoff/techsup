@@ -6,7 +6,7 @@ export function spiralise(
 ) {
 	const NS = 'http://www.w3.org/2000/svg';
 
-	let time = 0;
+	let time = 1000;
 	let cx = 0;
 	let cy = 0;
 	let rects: any[] = [];
@@ -62,7 +62,8 @@ export function spiralise(
 		let skipRings = 1;
 
 		for (let w = 0; w < numWaves; w++) {
-			const waveAngleOffset = (w / numWaves) * Math.PI * 2;
+			const SPIRAL_OFFSET = 3; // 2 (normal spiral)
+			const waveAngleOffset = (w / numWaves) * Math.PI * SPIRAL_OFFSET;
 			const hue = (w / numWaves) * 360;
 
 			for (let r = skipRings; r < numRings; r++) {

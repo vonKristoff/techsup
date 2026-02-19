@@ -17,8 +17,21 @@ const config = {
 	//       strict: true,
 	//     }),
 	//   },
-	kit: { adapter: adapter() },
-	extensions: ['.svelte', '.svx']
+	kit: {
+		adapter: adapter(),
+		experimental: {
+			remoteFunctions: true
+		},
+		alias: {
+			'$server/*': './src/lib/server/*'
+		}
+	},
+	extensions: ['.svelte', '.svx'],
+	compilerOptions: {
+		experimental: {
+			async: true
+		}
+	}
 };
 
 export default config;
