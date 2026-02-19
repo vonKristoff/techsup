@@ -16,6 +16,7 @@ export const subscribe = form(
 			Active: true
 		};
 
+		await new Promise((resolve) => setTimeout(resolve, 1000));
 		try {
 			const response = await fetch(API_ENDPOINT, {
 				method: 'POST',
@@ -30,7 +31,6 @@ export const subscribe = form(
 				throw new Error('Network response was not ok');
 			}
 
-			// await new Promise((resolve) => setTimeout(resolve, 3000));
 			return { success: true };
 		} catch (error) {
 			console.error('Error:', error);

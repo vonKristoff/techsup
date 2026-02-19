@@ -35,7 +35,6 @@ export function spiralise(
 		node.innerHTML = '';
 		rects = [];
 		updateCenter();
-		console.log(cx);
 
 		// Glow filter
 		const defs = document.createElementNS(NS, 'defs');
