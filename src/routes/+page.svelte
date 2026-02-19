@@ -5,7 +5,7 @@
 	import global from '$lib/components/global.svelte';
 	import { Sidebar } from '$lib/components/Sidebar';
 	import { inView } from '$lib/utils/action.InterTranslate.svelte';
-
+	import { spiralise } from '$lib/utils/action.spiral.svelte';
 	let hasLoaded = $state(false);
 	$effect(() => {
 		const hero = new Image();
@@ -81,6 +81,7 @@
 			</div>
 		</div>
 	</Section>
+
 	<Section bg="dark">
 		<div class="breakout text-2xl font-light">
 			<p>
@@ -114,13 +115,21 @@
 			</div> -->
 		<!-- </div> -->
 	</Section>
-
+	<!-- <Section bg="light"></Section> -->
 	<Section bg="dark">
+		<div class="relative full-width">
+			<svg
+				class="absolute inset-0"
+				use:spiralise={{ numRings: 12, numWaves: 10 }}
+				width="100%"
+				height="80vh"
+			></svg>
+		</div>
 		<div class="breakout w-full">
 			<p class="font-light text-4xl text-center">Proudly introducing late 2026</p>
 			<p class="text-center font-light italic text-xl">Pong but with lazers.</p>
 			<svg
-				class="custom-drop"
+				class="custom-drop relative"
 				width="100%"
 				height="50vh"
 				fill="#003727"
@@ -151,8 +160,7 @@
 				</div>
 				<button
 					onclick={() => global.modal?.showModal()}
-					class="inline-button border-2 py-4 md:py-2 rounded-lg py-2 px-8"
-					>Connect to hotline</button
+					class="inline-button border-2 py-4 md:py-2 rounded-lg px-8">Connect to hotline</button
 				>
 			</div>
 		</div>
@@ -183,7 +191,7 @@
 			transition: all 0.3s;
 			position: absolute;
 			content: 'Coming soon!';
-			transform: translateY(-150%);
+			transform: translateY(-170%);
 		}
 	}
 	button[data-hover='Coming soon']:hover {
