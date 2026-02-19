@@ -129,7 +129,8 @@ export function spiralise(
 		rafId = requestAnimationFrame(animate);
 	}
 
-	new ResizeObserver(onResize).observe(node);
+	const observer: ResizeObserver = new ResizeObserver(onResize);
+	observer.observe(node);
 
 	function onResize() {
 		updateCenter();
@@ -141,17 +142,18 @@ export function spiralise(
 	buildScene();
 	rafId = requestAnimationFrame(animate);
 
-	// return {
-	// 	destroy() {
-	// 		destroyed = true;
-	// 		cancelAnimationFrame(rafId);
-	// 		observer.disconnect();
-	// 		node.innerHTML = '';
-	// 	},
-	// 	update(params: { numRings?: number; numWaves?: number }) {
-	// 		numRings = params.numRings ?? numRings;
-	// 		numWaves = params.numWaves ?? numWaves;
-	// 		buildScene();
-	// 	}
-	// };
+	return {
+		destroy() {
+			destroyed = true;
+			cancelAnimationFrame(rafId);
+			observer.disconnect();
+			node.innerHTML = '';
+			console.log('GOODBY');
+		}
+		// update(params: { numRings?: number; numWaves?: number }) {
+		// 	numRings = params.numRings ?? numRings;
+		// 	numWaves = params.numWaves ?? numWaves;
+		// 	buildScene();
+		// }
+	};
 }

@@ -6,6 +6,9 @@
 	import { Sidebar } from '$lib/components/Sidebar';
 	import { inView } from '$lib/utils/action.InterTranslate.svelte';
 	import { spiralise } from '$lib/utils/action.spiral.svelte';
+	import { MediaQuery } from 'svelte/reactivity';
+
+	let isMobile = new MediaQuery('max-width: 768px');
 	let hasLoaded = $state(false);
 	$effect(() => {
 		const hero = new Image();
@@ -89,7 +92,7 @@
 				arcade games, tabletop games, carnival games...
 			</p>
 		</div>
-		<span class="font-primary text-4xl md:text-6xl breakout text-center"
+		<span class="font-primary text-4xl md:text-8xl full-width text-center"
 			>IF IT ENDS IN 'GAME' WE'RE IN!</span
 		>
 		<div class="breakout text-2xl font-light">
@@ -101,31 +104,25 @@
 		</div>
 	</Section>
 	<Section bg="light">
-		<!-- <div class="grid grid-cols-3 full-width overflow-hidden"> -->
-		<!-- <div class="col">
-				<Icon ctx="test1" colour="pink" />
-			</div> -->
 		<div class="flex flex-col text-6xl md:text-8xl font-primary px-8">
 			<span>IMMEDIATE.</span>
 			<span>TACTILE.</span>
 			<span>SCREEN-LESS.</span>
 		</div>
-		<!-- <div class="col h-screen absolute">
-				<Icon ctx="test2" size="100em" weight="1em" colour="pink" />
-			</div> -->
-		<!-- </div> -->
 	</Section>
-	<!-- <Section bg="light"></Section> -->
-	<Section bg="dark">
-		<div class="relative full-width">
-			<svg
-				class="absolute inset-0"
-				use:spiralise={{ numRings: 12, numWaves: 10 }}
-				width="100%"
-				height="80vh"
-			></svg>
-		</div>
-		<div class="breakout w-full">
+
+	<Section bg="dark" style="">
+		{#if !isMobile.current}
+			<div class="full-width relative">
+				<svg
+					class="absolute inset-0 -top-16"
+					use:spiralise={{ numRings: 16, numWaves: 4 }}
+					width="100%"
+					height="100dvh"
+				></svg>
+			</div>
+		{/if}
+		<div class="breakout w-full relative">
 			<p class="font-light text-4xl text-center">Proudly introducing late 2026</p>
 			<p class="text-center font-light italic text-xl">Pong but with lazers.</p>
 			<svg
@@ -138,6 +135,14 @@
 			>
 				<use href="sprites.svg#icon-koleider-logo-mono"></use>
 			</svg>
+			{#if isMobile.current}
+				<svg
+					class="absolute top-1/4 left-0"
+					use:spiralise={{ numRings: 12, numWaves: 2 }}
+					width="100%"
+					height="50dvh"
+				></svg>
+			{/if}
 		</div>
 		<div class="flex flex-col gap-4 px-8">
 			<p class="text-center font-bold text-3xl">Kickstarter launching April 30th</p>
@@ -185,17 +190,22 @@
 <style>
 	.bg-secondary-wash {
 		background-color: #01372796;
+		p {
+			background-color: var(--hue-5);
+		}
 	}
 	button[data-hover='Coming soon'] {
 		&::before {
 			transition: all 0.3s;
 			position: absolute;
 			content: 'Coming soon!';
+			visibility: hidden;
 			transform: translateY(-170%);
 		}
 	}
 	button[data-hover='Coming soon']:hover {
 		&::before {
+			visibility: visible;
 			transform: translateY(0%);
 		}
 		span {
