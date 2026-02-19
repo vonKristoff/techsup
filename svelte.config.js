@@ -1,5 +1,6 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
+const isStaging = process.env.STAGING === 'true';
 import netlifyAdapter from '@sveltejs/adapter-netlify';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -19,12 +20,12 @@ const config = {
 	//     }),
 	//   },
 	kit: {
-		adapter: netlifyAdapter(),
+		adapter: isStaging ? netlifyAdapter() : adapter(),
 		experimental: {
 			remoteFunctions: true
 		},
 		alias: {
-			'$server/*': './src/lib/server/*'
+			'$remote/*': './src/lib/remote/*'
 		}
 	},
 	extensions: ['.svelte', '.svx'],

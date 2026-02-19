@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+# context is branch pushed
+[context.staging]
+  command = "STAGING=true npm run build"
