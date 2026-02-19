@@ -1,8 +1,8 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
-const isStaging = process.env.STAGING === 'true';
 import netlifyAdapter from '@sveltejs/adapter-netlify';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+const isStaging = process.argv.includes('staging');
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
