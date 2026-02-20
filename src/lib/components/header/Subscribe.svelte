@@ -1,4 +1,5 @@
 <script>
+	import { fade } from 'svelte/transition';
 	import { subscribe } from '$lib/remote/register.remote';
 	import Icon from '../Icon.svelte';
 	let { children } = $props();
@@ -54,13 +55,13 @@
 								id="email"
 								type="email"
 								name="email"
-								placeholder="lfg@mail.com"
+								placeholder="lfg@friend.cool"
 								class="block min-w-0 grow bg-pop-200 py-1.5 pr-3 pl-1 md:text-2xl text-accent-100 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
 							/>
 						</div>
 					</div>
 					{#if pending}
-						<div class="flex justify-center text-4xl text-shadow-2xs">
+						<div transition:fade class="flex justify-center text-4xl text-shadow-2xs">
 							<!-- <div class="animate-spin">
 								<Icon ctx="clock" colour="red" />
 							</div> -->
@@ -74,7 +75,8 @@
 							>Sign me up!</button
 						>
 					{:else}
-						<span class="text-center p-4 mt-4 bg-emerald-300 text-accent rounded-lg">{message}</span
+						<span transition:fade class="text-center p-4 mt-4 bg-emerald-300 text-accent rounded-lg"
+							>{message}</span
 						>
 					{/if}
 					<!-- <button class="rounded-md bg-wash-200 p-2" type="submit"> Sign me up </button> -->
