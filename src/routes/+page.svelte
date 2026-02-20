@@ -56,9 +56,13 @@
 		</div>
 	</Section>
 	<Section bg="light" paddingTop={false} img="dooodles.jpg">
-		<div use:inView data-view="translateY" class="breakout text-2xl font-light flex flex-col gap-8">
+		<div
+			use:inView
+			data-view="translate-scrollY"
+			class="breakout text-2xl font-light flex flex-col gap-8"
+		>
 			<div
-				class="grid grid-cols-1 lg:grid-cols-2 gap-4 [&>p]:px-6 [&>p]:py-4 [&>p]:h-max [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
+				class="grid grid-cols-1 lg:grid-cols-2 gap-4 [&>p]:px-12 [&>p]:py-8 [&>p]:h-max [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
 			>
 				<p class="border-2">
 					👋 We are Tech Support! <br /> A friendly games studio, local to Walthamstow. Inspired by builders,

@@ -38,11 +38,28 @@ body {
 
 [data-view] {
 	transition: all 0.4s ease-in;
-	opacity: 0;
+	/* opacity: 0; */
 }
 
 [data-view='translateY'].in-view {
 	opacity: 1;
 	transition-delay: 0.125s;
 	transform: translateY(-2em);
+}
+
+[data-view='translate-scrollY'] {
+	animation: slide-in-y ease-in-out;
+	animation-timeline: scroll(root);
+	animation-range: entry 0% entry 20%;
+}
+
+@keyframes slide-in-y {
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
