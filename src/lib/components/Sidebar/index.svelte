@@ -176,7 +176,7 @@
 		inset: 0;
 		width: 100%;
 		height: 100%;
-		background-image: url('koleider-logo-mono.svg');
+		background-image: url('/koleider-logo-mono.svg');
 		background-repeat: repeat;
 		background-position: center;
 		background-size: 8em;
