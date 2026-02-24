@@ -50,7 +50,7 @@
 				<h3
 					class="text-3xl md:text-6xl breakout text-right font-tertiary text-prime-200 inline-block tracking-wider"
 				>
-					making fun. irl.
+					calling up fun. irl.
 				</h3>
 			</div>
 		</div>
@@ -59,32 +59,25 @@
 		<div
 			use:inView
 			data-view="translate-scrollY"
-			class="breakout text-2xl font-light flex flex-col gap-8"
+			class="wide text-2xl font-light flex flex-col gap-16"
 		>
 			<div
-				class="grid grid-cols-1 lg:grid-cols-2 gap-4 [&>p]:px-8 [&>p]:py-6 [&>p]:h-max [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
+				class="grid grid-cols-1 bg-secondary-wash [&>p]:px-8 [&>p]:py-8 [&>p]:h-max [&>p]:backdrop-blur-xs [&>p]:rounded-2xl"
 			>
-				<p class="border-2">
-					👋 We are Tech Support! <br /> A friendly games studio, local to Walthamstow.
-					<br /><br />Inspired by builders, makers and designers: we are taking an innovative path
-					to bring physical games in combination with a digital element to your table top.
-				</p>
-
-				<p class="-rotate-2">
-					We love the DIY 🪚 Makers aesthetic, and are taking that forward by blending materials and
-					techniques you might expect from Arcade cabinets, 3D printers, Laser cutters and all that
-					reeks of being hand crafted.
+				<p class="border-2 font-tertiary font-bold text-6xl tracking-wider">
+					🌈 Inspired by builders and makers of the DIY aesthetic 🪚 to bring you games with digital
+					🔌 elements to your table top...
 				</p>
 			</div>
 			<div
-				class="grid grid-cols-1 lg:grid-cols-2 gap-4 [&>p]:px-8 [&>p]:py-6 [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
+				class="grid grid-cols-1 lg:grid-cols-2 gap-16 [&>p]:px-8 [&>p]:py-6 [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
 			>
-				<p class="rotate-2">
-					With our 📐 engineering and design toolsets, fluency in software, we work with local
-					manufacturers to bring quality products, far far away from an AI generated landscape. 🤖
+				<p class="rotate-2" style="background-color: brown;">
+					With our engineering and design workflows, we work with local manufacturers to bring
+					quality products, far far away from an AI generated landscape. 🤖
 				</p>
 
-				<p class="self-end border-2">We look forward to hearing from you via the hotline. ☎️</p>
+				<p class="self-end border-2">We look forward to hearing from you via the hotline. ☎️ 👀</p>
 			</div>
 		</div>
 	</Section>
@@ -96,9 +89,13 @@
 				arcade games, tabletop games, carnival games...
 			</p>
 		</div>
-		<span class="font-primary text-4xl md:text-8xl full-width text-center"
-			>IF IT ENDS IN 'GAME' WE'RE IN!</span
+		<div
+			use:intersection
+			data-slam
+			class="font-primary text-4xl md:text-8xl breakout text-center overflow-clip"
 		>
+			IF IT ENDS IN 'GAME'<span>WE'RE IN!</span>
+		</div>
 		<div class="breakout text-2xl font-light">
 			<p>
 				Lucky for us, it's a rivalry straining with explosive potential. What does that mean? It
@@ -108,7 +105,7 @@
 		</div>
 	</Section>
 	<Section bg="light">
-		<div class="flex flex-col text-6xl md:text-8xl font-primary px-8">
+		<div data-effect use:intersection class="flex flex-col text-6xl md:text-8xl font-primary px-8">
 			<span>IMMEDIATE.</span>
 			<span>TACTILE.</span>
 			<span>SCREEN-LESS.</span>
@@ -193,7 +190,7 @@
 
 <style>
 	.bg-secondary-wash {
-		background-color: #01372796;
+		/* background-color: #01372796; */
 		p {
 			background-color: var(--hue-5);
 		}
@@ -227,6 +224,50 @@
 		opacity: 0;
 		@media (min-width: 768px) {
 			left: calc(768px / 2);
+		}
+	}
+
+	[data-slam] {
+		transform: translateX(-25%);
+		transition: all 0.2s ease-out;
+		opacity: 0;
+	}
+	:global([data-slam].show) {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+	[data-slam] > span {
+		display: inline-block;
+		transition: all 0.2s ease-out;
+		transition-delay: 0.6s;
+		opacity: 0;
+		transform: translateX(50%);
+	}
+	:global([data-slam].show > span) {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+
+	[data-effect] {
+		overflow: hidden;
+		& > span {
+			transition: all 0.2s ease-out;
+		}
+		span:nth-child(1) {
+			transform: translateY(-100%);
+		}
+		span:nth-child(2) {
+			transition-delay: 0.3s;
+			transform: translateX(-100%);
+		}
+		span:nth-child(3) {
+			transition-delay: 0.6s;
+			transform: translateY(100%);
+		}
+	}
+	:global([data-effect].show) {
+		& > span {
+			transform: translate(0, 0);
 		}
 	}
 

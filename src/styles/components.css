@@ -2,9 +2,9 @@
 	.content-grid {
 		display: grid;
 		grid-template-columns:
-			[full-start] 2fr [breakout-start] 1fr
+			[full-start] 1fr [wide-start] 1fr [breakout-start] 1fr
 			[content-start] minmax(0, 65ch) [content-end]
-			1fr [breakout-end] 2fr [full-end];
+			1fr [breakout-end] 1fr [wide-end] 1fr [full-end];
 		@media (max-width: 767px) {
 			display: flex;
 			flex-direction: column;
@@ -12,6 +12,9 @@
 	}
 	.content-grid > * {
 		grid-column: content;
+	}
+	.content-grid > .wide {
+		grid-column: wide;
 	}
 	.content-grid > .breakout {
 		grid-column: breakout;
