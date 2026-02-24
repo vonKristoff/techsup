@@ -6,25 +6,25 @@
 			<a class="link w-fit" href="https://privacy.techsup.uk">Privacy policy</a>
 			<a class="link w-fit" href="https://unsubscribe.techsup.uk">Unsubscribe</a>
 		</div>
-		<span>Tech Support! Interactive Ltd.</span>
+		<span class="text-wash-300">Tech Support! Interactive Ltd.</span>
 	</aside>
 
-	<div class="flex flex-col text-text-200 text-sm justify-end items-center">
+	<div class=" text-wash-300 flex flex-col text-text-200 text-sm justify-end items-center">
 		<div
 			class="fob pink bg-primary-200 bg-center bg-cover bg-blend-lighten max-w-full border-4 rounded-2xl border-white md:border-transparent md:my-0 my-4"
 		></div>
 		<span>&copy; {new Date().getFullYear()}. All rights reserved.</span>
 	</div>
 
-	<aside class="flex flex-col text-right text-text-200 text-sm justify-end">
+	<aside class="flex flex-col text-right text-text-200 text-sm justify-end text-wash-300">
 		<span>Built by</span>
 		<a href="https://threejjjs.xyz">
-			<h5 class="text-right text-text-200 text-xl md:text-3xl font-primary m-0">
-				three<span class="text-secondary-200">jjj</span>s
+			<h5 class="text-right text-text-200 text-xl md:text-3xl font-secondary m-0">
+				three<span class="text-pop-200">jjj</span>s
 				<br />
 			</h5>
 		</a>
-		<span class="text-secondary-200 text-xs">Interactive Tech</span>
+		<span class="text-xs">Interactive Tech</span>
 	</aside>
 </footer>
 

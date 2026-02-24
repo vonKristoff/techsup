@@ -53,7 +53,7 @@
 		position: relative;
 		&:hover,
 		&:focus {
-			@apply text-accent-200;
+			@apply text-accent-100;
 			&:before {
 				width: 100%;
 				left: 0em;

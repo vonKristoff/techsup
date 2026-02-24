@@ -6,13 +6,15 @@
 	--hue-5: #0e172c;
 	--hue-6: #fffffe;
 	--hue-7: #131225;
+	--hue-8: #43c2c0;
 
 	--prime: oklch(from var(--hue-1) l c h);
 	--secondary: oklch(from var(--hue-2) l c h);
 	--neutral: oklch(from var(--hue-3) l c h);
 	--wash: oklch(from var(--hue-4) l c h);
-	--accent: oklch(from var(--hue-5) l c h);
+	--accent: oklch(from var(--hue-8) l c h);
 	--pop: oklch(from var(--hue-6) l c h);
+	--dark: oklch(from var(--hue-5) l c h);
 
 	--color-wash-100: oklch(from var(--wash) calc(l + 0.2) c h);
 	--color-wash-200: oklch(from var(--wash) l c h);
@@ -25,6 +27,10 @@
 	--color-accent-100: oklch(from var(--accent) calc(l + 0.2) c h);
 	--color-accent-200: oklch(from var(--accent) l c h);
 	--color-accent-300: oklch(from var(--accent) calc(l - 0.2) c h);
+
+	--color-dark-100: oklch(from var(--dark) calc(l + 0.2) c h);
+	--color-dark-200: oklch(from var(--dark) l c h);
+	--color-dark-300: oklch(from var(--dark) calc(l - 0.2) c h);
 
 	--color-pop-100: oklch(from var(--pop) calc(l + 0.2) c h);
 	--color-pop-200: oklch(from var(--pop) l c h);

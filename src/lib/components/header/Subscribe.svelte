@@ -90,6 +90,9 @@
 </div>
 
 <style>
+	.subscribe-card {
+		box-shadow: 0 1em 0 var(--hue-5);
+	}
 	@keyframes vibrate {
 		/* burst 1: 0–33% (0s–1s) */
 		0% {
