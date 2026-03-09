@@ -1,5 +1,6 @@
 <script>
 	let { modalRef = $bindable() } = $props();
+	import Icon from '../Icon.svelte';
 </script>
 
 <button
@@ -11,7 +12,7 @@
 >
 	<div data-clipper class="flex gap-4 md:gap-2 transition-all">
 		<span class="gradient-text">CONNECT TO HOTLINE</span>
-		<span>☎️</span>
+		<span class="inline-block"><Icon ctx="ts-hotline" colour="transparent" /></span>
 	</div>
 </button>
 

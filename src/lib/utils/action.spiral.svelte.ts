@@ -148,7 +148,6 @@ export function spiralise(
 			cancelAnimationFrame(rafId);
 			observer.disconnect();
 			node.innerHTML = '';
-			console.log('GOODBY');
 		}
 		// update(params: { numRings?: number; numWaves?: number }) {
 		// 	numRings = params.numRings ?? numRings;

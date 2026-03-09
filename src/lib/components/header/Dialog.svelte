@@ -21,7 +21,9 @@
 				<Icon ctx="x" colour="white" />
 			</button>
 		</div>
-		<h2 class="text-3xl md:text-6xl mb-0 text-red-500 text-center text-shadow-2xs">☎️ HOTLINE</h2>
+		<h2 class="text-3xl md:text-6xl mb-0 text-red-500 text-center text-shadow-2xs">
+			<span class="inline-block"><Icon ctx="ts-hotline" colour="transparent" /></span> HOTLINE
+		</h2>
 		<nav class="grid place-content-center font-secondary gap-y-4 text-secondary-200">
 			<!-- <p class="text-2xl text-center">Have enquiries? Talk to us!</p> -->
 			<Subscribe>
@@ -29,7 +31,9 @@
 				<div class="flex gap-4 items-center justify-center text-lg md:text-2xl">
 					<Icon ctx="mail" />
 					<a class="link" href="mailto:hello@techsup.uk">
-						<span>👋 hello @ techsup.uk</span>
+						<span class="inline-block"><Icon ctx="ts-wave" colour="transparent" /></span><span>
+							hello @ techsup.uk</span
+						>
 					</a>
 				</div>
 			</Subscribe>

@@ -14,10 +14,10 @@
 	class="flex items-center fixed top-0 w-full p-8 backdrop-blur-2xl z-10 text-prime-200"
 >
 	<aside class="shrink-0 text-md md:text-xl lg:text-2xl relative z-10">
-		<button
+		<!-- <button
 			class="hover:text-wash-200 transition-all hover:translate-x-1 border-2 px-4 rounded-lg py-1"
 			onclick={() => global.toggleSidebar()}>KOLEIDAR</button
-		>
+		> -->
 		<!-- <Icon ctx="lazer" weight=".75em" /> -->
 	</aside>
 	<nav class="grow">

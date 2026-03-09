@@ -62,22 +62,32 @@
 			class="wide text-2xl font-light flex flex-col gap-16"
 		>
 			<div
-				class="grid grid-cols-1 bg-secondary-wash [&>p]:px-8 [&>p]:py-8 [&>p]:h-max [&>p]:backdrop-blur-xs [&>p]:rounded-2xl"
+				class="grid grid-cols-1 bg-secondary-wash px-4 md:px-0 [&>p]:px-4 md:[&>p]:px-8 [&>p]:py-8 [&>p]:h-max [&>p]:backdrop-blur-xs [&>p]:rounded-2xl"
 			>
-				<p class="border-2 font-tertiary font-bold text-6xl tracking-wider">
-					🌈 Inspired by builders and makers of the DIY aesthetic 🪚 to bring you games with digital
-					🔌 elements to your table top...
+				<p class="border-2 font-tertiary font-bold text-2xl md:text-6xl tracking-wider">
+					<span class="inline-block"><Icon ctx="ts-rainbow" colour="transparent" /></span> Inspired
+					by builders and makers of the DIY aesthetic
+					<span class="inline-block"><Icon ctx="ts-saw" colour="transparent" /></span> to bring you
+					games with digital
+					<span class="inline-block"><Icon ctx="ts-plug" colour="transparent" /></span> elements to your
+					table top...
 				</p>
 			</div>
 			<div
-				class="grid grid-cols-1 lg:grid-cols-2 gap-16 [&>p]:px-8 [&>p]:py-6 [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
+				class="grid grid-cols-1 lg:grid-cols-2 px-4 md:px-0 gap-16 [&>p]:px-4 md:[&>p]:px-8 [&>p]:py-6 [&>p]:backdrop-blur-xs bg-secondary-wash [&>p]:rounded-2xl"
 			>
 				<p class="rotate-2" style="background-color: brown;">
 					With our engineering and design workflows, we work with local manufacturers to bring
-					quality products, far far away from an AI generated landscape. 🤖
+					quality products, far far away from an AI generated landscape. <span
+						class="absolute text-right"><Icon ctx="ts-robot" colour="transparent" size="2" /></span
+					>
 				</p>
 
-				<p class="self-end border-2">We look forward to hearing from you via the hotline. ☎️ 👀</p>
+				<p class="self-end border-2 text-lg md:text-2xl">
+					We look forward to hearing from you via the hotline. <span class="inline-block"
+						><Icon ctx="ts-hotline" colour="transparent" /></span
+					><span class="inline-block"><Icon ctx="ts-eyes" colour="transparent" /></span>
+				</p>
 			</div>
 		</div>
 	</Section>
@@ -99,9 +109,12 @@
 		<div class="breakout text-2xl font-light">
 			<p>
 				Lucky for us, it's a rivalry straining with explosive potential. What does that mean? It
-				means we're priming 💥 <strong>ka-booms:</strong> games that fuse the best use of what we love
-				in ways that bring us together. Accessible, tactile, and, most importantly, screen-less.
+				means we're priming <span class="inline-block"
+					><Icon ctx="ts-kaboom" colour="transparent" /></span
+				> <strong>ka-booms:</strong> games that fuse the best use of what we love in ways that bring us
+				together.
 			</p>
+			<!-- Accessible, tactile, and, most importantly, screen-less. -->
 		</div>
 	</Section>
 	<Section bg="light">
@@ -112,7 +125,7 @@
 		</div>
 	</Section>
 
-	<Section bg="dark">
+	<!-- <Section bg="dark">
 		{#if !isMobile.current}
 			<div class="full-width relative">
 				<svg
@@ -170,7 +183,7 @@
 				>
 			</div>
 		</div>
-	</Section>
+	</Section> -->
 	<Section bg="light">
 		<div class="breakout text-lg font-light">
 			<p class="text-xl font-light">
