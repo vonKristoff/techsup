@@ -6,6 +6,7 @@ COPY pnpm-lock.yaml package.json ./
 
 # Build stage
 FROM base AS build
+ENV CI=true
 RUN pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm run build
@@ -13,7 +14,8 @@ RUN pnpm prune --prod
 
 # Production stage
 FROM base AS production
-ENV NODE_ENV=production
+ENV NODE_ENV=production \
+    ORIGIN=http://localhost:3000
 
 # Copy build output and production-only node_modules
 COPY --from=build /app/build ./build
