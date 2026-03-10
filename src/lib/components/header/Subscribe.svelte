@@ -31,7 +31,7 @@
 			>
 				<div class="flex flex-col gap-4">
 					<div class="">
-						<label for="username" class="block text-sm/6 font-light">Nickname</label>
+						<label for="username" class="block text-sm/6 text-wash-300 font-light">Nickname</label>
 
 						<div
 							class="flex items-center overflow-hidden rounded-md bg-pop-200 pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600"
@@ -41,12 +41,12 @@
 								type="text"
 								name="username"
 								placeholder="violet67"
-								class="block min-w-0 grow bg-pop-200 py-1.5 pr-3 pl-1 text-accent-100 md:text-2xl placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+								class="block min-w-0 grow bg-pop-200 py-1.5 pr-3 pl-1 text-wash-200 md:text-2xl placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
 							/>
 						</div>
 					</div>
 					<div class="">
-						<label for="username" class="block text-sm/6 font-light">Email</label>
+						<label for="username" class="block text-sm/6 text-wash-300 font-light">Email</label>
 
 						<div
 							class="flex items-center overflow-hidden rounded-md bg-pop-200 pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:outline-indigo-600"
@@ -56,7 +56,7 @@
 								type="email"
 								name="email"
 								placeholder="lfg@friend.cool"
-								class="block min-w-0 grow bg-pop-200 py-1.5 pr-3 pl-1 md:text-2xl text-accent-100 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+								class="block min-w-0 grow bg-pop-200 py-1.5 pr-3 pl-1 md:text-2xl text-wash-200 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
 							/>
 						</div>
 					</div>

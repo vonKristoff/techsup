@@ -28,7 +28,7 @@
 	--color-accent-200: oklch(from var(--accent) l c h);
 	--color-accent-300: oklch(from var(--accent) calc(l - 0.2) c h);
 
-	--color-dark-100: oklch(from var(--dark) calc(l + 0.2) c h);
+	--color-dark-100: oklch(from var(--dark) calc(l + 0.4) c h);
 	--color-dark-200: oklch(from var(--dark) l c h);
 	--color-dark-300: oklch(from var(--dark) calc(l - 0.2) c h);
 
