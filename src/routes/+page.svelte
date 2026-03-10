@@ -50,7 +50,7 @@
 				<h3
 					class="text-3xl md:text-6xl breakout text-right font-tertiary text-prime-200 inline-block tracking-wider"
 				>
-					calling up fun. irl.
+					dialing up fun. irl.
 				</h3>
 			</div>
 		</div>
