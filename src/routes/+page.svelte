@@ -46,13 +46,13 @@
 				class:show={hasLoaded}
 				class="hero bg-center bg-cover bg-secondary-200 bg-blend-lighten max-w-full"
 			></div>
-			<div class="flex justify-end content-grid absolute bottom-24 w-full">
+			<!-- <div class="flex justify-end content-grid absolute bottom-24 w-full">
 				<h3
 					class="text-3xl md:text-6xl breakout text-right font-tertiary text-prime-200 inline-block tracking-wider"
 				>
-					dialing up fun. irl.
+					pick it up!
 				</h3>
-			</div>
+			</div> -->
 		</div>
 	</Section>
 	<Section bg="light" paddingTop={false} img="dooodles.jpg">
@@ -125,20 +125,21 @@
 		</div>
 	</Section>
 
-	<!-- <Section bg="dark">
+	<Section bg="dark">
 		{#if !isMobile.current}
 			<div class="full-width relative">
 				<svg
 					class="absolute inset-0 -top-16"
 					use:spiralise={{ numRings: 16, numWaves: 5 }}
 					width="100%"
-					height="100dvh"
+					height="50vh"
 				></svg>
 			</div>
 		{/if}
-		<div class="breakout w-full relative">
-			<p class="font-light text-4xl text-center">Proudly introducing late 2026</p>
-			<p class="text-center font-light italic text-xl">Pong but with lazers.</p>
+		<div class="breakout w-full relative overflow-hidden">
+			<p class="font-light text-4xl text-center">Something is coming...</p>
+			<h2 class="text-center text-6xl">SOOOOOOOOON</h2>
+			<!-- <p class="text-center font-light italic text-xl">Pong but with lazers.</p>
 			<svg
 				class="custom-drop"
 				width="100%"
@@ -156,9 +157,9 @@
 					width="100%"
 					height="50dvh"
 				></svg>
-			{/if}
+			{/if} -->
 		</div>
-		<div class="flex flex-col gap-4 px-8 relative">
+		<!-- <div class="flex flex-col gap-4 px-8 relative">
 			<p class="text-center font-bold text-3xl">Kickstarter launching 🔜 TBC</p>
 			<div class="flex flex-col items-center gap-4 md:flex-row justify-center">
 				<button
@@ -182,8 +183,8 @@
 					class="inline-button border-2 py-4 md:py-2 rounded-lg px-8">Connect to hotline</button
 				>
 			</div>
-		</div>
-	</Section> -->
+		</div> -->
+	</Section>
 	<Section bg="light">
 		<div class="breakout text-lg font-light">
 			<p class="text-xl font-light">

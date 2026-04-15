@@ -17,7 +17,7 @@
 	</div>
 
 	<aside class="flex flex-col text-right text-text-200 text-sm justify-end text-wash-300">
-		<span>Built by</span>
+		<span>Built by humans</span>
 		<a href="https://threejjjs.xyz">
 			<h5 class="text-right text-text-200 text-xl md:text-3xl font-secondary m-0">
 				three<span class="text-pop-200">jjj</span>s
