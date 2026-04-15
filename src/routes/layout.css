@@ -48,7 +48,7 @@ body {
 }
 
 [data-view='translate-scrollY'] {
-	animation: slide-in-y ease-in-out;
+	animation: slide-in-y 1s ease-in-out forwards;
 	animation-timeline: scroll(root);
 	animation-range: entry 0% entry 20%;
 }
@@ -59,7 +59,7 @@ body {
 		opacity: 0;
 	}
 	to {
-		transform: translateY(0);
+		transform: translateY(0%);
 		opacity: 1;
 	}
 }
