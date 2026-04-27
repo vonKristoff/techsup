@@ -24,7 +24,7 @@
 		<div
 			class="absolute inset-0 items-center hidden text-xl lg:text-4xl md:flex gap-2 justify-center pointer-none"
 		>
-			<div class="flex justify-center">TABLE TOP GAMES MAKERS</div>
+			<div class="flex justify-center font-primary">TABLE TOP GAMES MAKERS</div>
 		</div>
 	</nav>
 	<aside class="shrink-0 flex items-center text-md md:text-xl lg:text-2xl px-2 py-2">

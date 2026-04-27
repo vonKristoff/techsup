@@ -89,7 +89,7 @@
 			<span>SCREEN-LESS.</span>
 		</div>
 	</Section>
-	<Section bg="dark" paddingTop={true}>
+	<Section img="ts-bg-tile.svg" bg="dark" paddingTop={true}>
 		<div
 			// use:inView
 			// data-view="translate-scrollY"
@@ -129,15 +129,15 @@
 
 			{#if !isMobile.current}
 				<!-- <div class="full-width relative"> -->
-				<svg
+				<!-- <svg
 					class="absolute inset-0 -z-10"
 					use:spiralise={{ numRings: 16, numWaves: 5 }}
 					width="100%"
 					height="100%"
-				></svg>
+				></svg> -->
 				<!-- </div> -->
 			{/if}
-			<div class="breakout w-full relative overflow-hidden">
+			<div class="breakout w-full text-secondary relative overflow-hidden">
 				<p class="font-light text-4xl text-center">Something is coming...</p>
 				<h2 class="text-center text-6xl">SOOOOOOOOON</h2>
 				<!-- <p class="text-center font-light italic text-xl">Pong but with lazers.</p>
@@ -264,7 +264,8 @@
 	}
 
 	.hero.show {
-		background-image: url('/TU.svg');
+		background-image: url('/TU.png');
+		background-size: 80%;
 		opacity: 1;
 		filter: blur(0);
 		transform: rotate(0deg) scale(1);
@@ -279,7 +280,7 @@
 		opacity: 0;
 		filter: blur(1em);
 		max-height: 70dvh;
-		aspect-ratio: 5/3;
+		aspect-ratio: 9/3;
 		width: 100vw;
 		background-repeat: no-repeat;
 		@media (min-width: 768px) {
