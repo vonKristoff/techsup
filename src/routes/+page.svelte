@@ -266,6 +266,7 @@
 	.hero.show {
 		background-image: url('/TU.png');
 		background-size: 80%;
+		background-position-y: 70%;
 		opacity: 1;
 		filter: blur(0);
 		transform: rotate(0deg) scale(1);
@@ -279,7 +280,7 @@
 		transform-origin: center;
 		opacity: 0;
 		filter: blur(1em);
-		max-height: 70dvh;
+		max-height: 80dvh;
 		aspect-ratio: 9/3;
 		width: 100vw;
 		background-repeat: no-repeat;
