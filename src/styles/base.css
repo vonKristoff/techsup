@@ -1,6 +1,6 @@
 @layer base {
 	body {
-		@apply text-secondary-200;
+		color: var(--color-prime-300);
 		@apply font-secondary;
 		@apply bg-primary;
 		word-wrap: break-word;

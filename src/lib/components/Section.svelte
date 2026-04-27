@@ -6,16 +6,18 @@
 		img,
 		paddingTop = true,
 		children,
-		style
+		style,
+		tile = false
 	}: {
 		img?: string;
 		paddingTop?: boolean;
 		style?: string;
 		bg: 'dark' | 'light';
+		tile?: boolean;
 		children: Snippet;
 	} = $props();
 </script>
 
-<InterSection {bg} {style} {paddingTop} {img}>
+<InterSection {bg} {style} {paddingTop} {img} {tile}>
 	{@render children()}
 </InterSection>

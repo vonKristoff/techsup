@@ -11,7 +11,7 @@
 	class:lighten={global.ambience === 'lighten'}
 	class:darken={global.ambience === 'darken'}
 	class:sidebar={global.sidebar}
-	class="flex items-center fixed top-0 w-full p-8 backdrop-blur-2xl z-10 text-prime-200"
+	class="flex items-center fixed top-0 w-full p-8 backdrop-blur-2xl z-10"
 >
 	<aside class="shrink-0 text-md md:text-xl lg:text-2xl relative z-10">
 		<!-- <button
@@ -38,12 +38,12 @@
 	header {
 		transition: color 0.3s;
 	}
-	.lighten {
+	/* .lighten {
 		color: var(--hue-1);
 	}
 	.darken {
 		color: var(--hue-2);
-	}
+	} */
 	.sidebar {
 		color: var(--color-wash-200);
 	}
