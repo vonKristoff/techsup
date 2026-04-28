@@ -20,6 +20,7 @@
 	--accent: oklch(from var(--hue-8) l c h);
 	--pop: oklch(from var(--hue-6) l c h);
 	--dark: oklch(from var(--hue-5) l c h);
+	--header: #f0ffffef;
 
 	--color-wash-100: oklch(from var(--wash) calc(l + 0.2) c h);
 	--color-wash-200: oklch(from var(--wash) l c h);

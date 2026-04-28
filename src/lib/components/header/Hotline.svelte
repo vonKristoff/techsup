@@ -12,13 +12,17 @@
 >
 	<div data-clipper class="flex gap-4 md:gap-2 transition-all">
 		<span class="gradient-text">CONNECT TO HOTLINE</span>
-		<span class="inline-block"><Icon ctx="ts-hotline" colour="transparent" /></span>
+		<span class="hidden md:inline-block"><Icon ctx="ts-hotline" colour="transparent" /></span>
 	</div>
 </button>
 
 <style>
 	[data-clipper] {
 		transform: translateX(1.25em);
+		@media (max-width: 767px) {
+			font-size: small;
+			transform: translateX(0);
+		}
 	}
 	.gradient-text {
 		position: relative;

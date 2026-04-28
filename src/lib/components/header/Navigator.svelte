@@ -11,18 +11,18 @@
 	class:lighten={global.ambience === 'lighten'}
 	class:darken={global.ambience === 'darken'}
 	class:sidebar={global.sidebar}
-	class="flex items-center fixed top-0 w-full p-8 border-b-8 border-b-prime-200 z-10"
+	class="flex items-center fixed top-0 w-full py-4 px-2 md:p-8 border-b-8 border-b-prime-200 z-10"
 >
 	<aside class="shrink-0 text-md md:text-xl lg:text-2xl relative z-10">
 		<!-- <button
-			class="hover:text-wash-200 transition-all hover:translate-x-1 border-2 px-4 rounded-lg py-1"
+			class="hover:text-wash-200 transitioPhotn-all hover:translate-x-1 border-2 px-4 rounded-lg py-1"
 			onclick={() => global.toggleSidebar()}>KOLEIDAR</button
 		> -->
 		<!-- <Icon ctx="lazer" weight=".75em" /> -->
 	</aside>
 	<nav class="grow">
 		<div
-			class="absolute inset-0 items-center hidden text-xl lg:text-4xl md:flex gap-2 justify-center pointer-none"
+			class="inset-0 static md:absolute items-center text-sm sm:text-xl lg:text-4xl md:flex gap-2 justify-center pointer-none"
 		>
 			<div class="flex justify-center font-primary">TABLE TOP GAMES MAKERS</div>
 		</div>
