@@ -5,6 +5,7 @@
 @import './components.css';
 
 body {
+	filter: sepia(0.3);
 	overflow-x: hidden;
 }
 html:has(dialog[open]),
