@@ -1,10 +1,8 @@
-# Base stage with pnpm
 FROM node:22-alpine AS base
 WORKDIR /app
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN corepack enable && corepack prepare pnpm@10.13.1 --activate
 COPY pnpm-lock.yaml package.json ./
 
-# Build stage
 FROM base AS build
 ENV CI=true
 RUN pnpm install --frozen-lockfile
@@ -12,14 +10,13 @@ COPY . .
 RUN pnpm run build
 RUN pnpm prune --prod
 
-# Production stage
-FROM base AS production
-ENV NODE_ENV=production \
-    ORIGIN=http://localhost:3000
+FROM node:22-alpine AS production
+WORKDIR /app
+ENV NODE_ENV=production
 
-# Copy build output and production-only node_modules
 COPY --from=build /app/build ./build
 COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/package.json ./package.json
 
 EXPOSE 3000
 ENTRYPOINT ["node", "build"]
