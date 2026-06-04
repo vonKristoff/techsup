@@ -11,7 +11,13 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [vitePreprocess(), mdsvex()],
 	kit: {
-		adapter: isStaging ? netlifyAdapter() : node(),
+		adapter: isStaging ? netlifyAdapter() : node(
+			{
+      out: 'build',
+      host: '0.0.0.0',  // Force listen on all interfaces
+      port: 3000,
+    }
+		),
 		experimental: {
 			remoteFunctions: true
 		},
