@@ -1,5 +1,6 @@
 services:
-  ${SERVICE_NAME}:
+  app:
+    container_name: ${{SERVICE_NAME}}
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,15 +9,15 @@ services:
       - HOST=0.0.0.0
       - PORT=3000
     ports:
-      - "0.0.0.0:${PORT}:3000"
+      - "0.0.0.0:${{PORT}}:3000"
     networks:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.${SERVICE_NAME}.rule=Host(`${HOST}`)"
-      - "traefik.http.routers.${SERVICE_NAME}.entrypoints=websecure"
-      - "traefik.http.routers.${SERVICE_NAME}.tls.certresolver=letsencrypt"
-      - "traefik.http.services.${SERVICE_NAME}.loadbalancer.server.port=3000"
+      - "traefik.http.routers.$$$${{SERVICE_NAME}}.rule=Host(`$$$${{HOST}}`)"
+      - "traefik.http.routers.$$$${{SERVICE_NAME}}.entrypoints=websecure"
+      - "traefik.http.routers.$$$${{SERVICE_NAME}}.tls.certresolver=letsencrypt"
+      - "traefik.http.services.$$$${{SERVICE_NAME}}.loadbalancer.server.port=3000"
 
 networks:
   dokploy-network:
