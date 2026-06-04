@@ -13,7 +13,7 @@ services:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.myapp.rule=Host(`techsup.uk`)"
+      - "traefik.http.routers.myapp.rule=Host(`mirror.techsup.uk`)"
       - "traefik.http.routers.myapp.entrypoints=websecure"
       - "traefik.http.routers.myapp.tls.certresolver=letsencrypt"
       - "traefik.http.services.myapp.loadbalancer.server.port=3000"
