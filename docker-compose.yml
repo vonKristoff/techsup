@@ -8,12 +8,12 @@ services:
       - HOST=0.0.0.0
       - PORT=3000
     ports:
-      - "0.0.0.0:3001:3000"
+      - "0.0.0.0:${PORT}:3000"
     networks:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.myapp.rule=Host(`mirror.techsup.uk`)"
+      - "traefik.http.routers.myapp.rule=Host(`${SUBDOMAIN}.techsup.uk`)"
       - "traefik.http.routers.myapp.entrypoints=websecure"
       - "traefik.http.routers.myapp.tls.certresolver=letsencrypt"
       - "traefik.http.services.myapp.loadbalancer.server.port=3000"
