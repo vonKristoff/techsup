@@ -9,7 +9,9 @@
 
 <div class="content-grid drop-shadow-xl">
 	<article class="grid place-content-center">
-		<div class="subscribe-card rounded-2xl border-2 bg-prime-100 p-6 md:p-12">
+		<div
+			class="subscribe-card rounded-2xl border-wash-300 border-4 bg-secondary-100 text-secondary-300 p-6 md:p-12"
+		>
 			<h2 class="text-3xl md:text-6xl">Register your interest</h2>
 			<form
 				id="subscribe"
@@ -34,14 +36,14 @@
 						<label for="username" class="block text-sm/6 text-wash-300 font-light">Nickname</label>
 
 						<div
-							class="flex items-center overflow-hidden rounded-md bg-pop-200 pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600"
+							class="border-2 border-wash-300 flex items-center overflow-hidden rounded-md bg-pop-200 pl-3 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600"
 						>
 							<input
 								id="username"
 								type="text"
 								name="username"
 								placeholder="violet67"
-								class="block min-w-0 grow bg-pop-200 py-1.5 pr-3 pl-1 text-wash-200 md:text-2xl placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+								class="block min-w-0 grow py-1.5 pr-3 pl-1 text-wash-200 md:text-2xl placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
 							/>
 						</div>
 					</div>
@@ -49,14 +51,14 @@
 						<label for="username" class="block text-sm/6 text-wash-300 font-light">Email</label>
 
 						<div
-							class="flex items-center overflow-hidden rounded-md bg-pop-200 pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:outline-indigo-600"
+							class="border-2 border-wash-300 flex items-center overflow-hidden rounded-md bg-pop-200 pl-3 focus-within:outline-2 focus-within:outline-indigo-600"
 						>
 							<input
 								id="email"
 								type="email"
 								name="email"
 								placeholder="lfg@friend.cool"
-								class="block min-w-0 grow bg-pop-200 py-1.5 pr-3 pl-1 md:text-2xl text-wash-200 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+								class=" block min-w-0 grow bg-pop-200 py-1.5 pr-3 pl-1 md:text-2xl text-wash-200 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
 							/>
 						</div>
 					</div>
@@ -71,7 +73,8 @@
 						</div>
 					{/if}
 					{#if !message}
-						<button class="inline-button border-2 bg-wash-100 rounded-lg mt-4 py-4 px-8"
+						<button
+							class="inline-button border-2 border-wash-300 text-secondary-100 bg-secondary-300 rounded-lg mt-4 py-4 px-8 text-xl uppercase"
 							>Sign me up!</button
 						>
 					{:else}
@@ -91,7 +94,7 @@
 
 <style>
 	.subscribe-card {
-		box-shadow: 0 1em 0 var(--hue-5);
+		box-shadow: 0 1em 0 var(--color-wash-300);
 	}
 	@keyframes vibrate {
 		/* burst 1: 0–33% (0s–1s) */

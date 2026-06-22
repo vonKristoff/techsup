@@ -10,7 +10,7 @@
 	aria-label="contact"
 	onclick={() => modalRef?.showModal()}
 >
-	<div data-clipper class="flex gap-4 md:gap-2 transition-all">
+	<div data-clipper class="flex gap-4 md:gap-2 transition-all font-tertiary">
 		<span class="gradient-text">CONNECT TO HOTLINE</span>
 		<span class="hidden md:inline-block"><Icon ctx="ts-hotline" colour="transparent" /></span>
 	</div>
@@ -52,9 +52,9 @@
 	}
 
 	button:hover {
-		.gradient-text {
+		/* .gradient-text {
 			background-position: 100% 0%;
-		}
+		} */
 		[data-clipper] {
 			transform: translateX(0em);
 		}

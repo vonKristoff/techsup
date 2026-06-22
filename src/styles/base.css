@@ -52,8 +52,8 @@
 			@apply border-accent-200;
 		}
 		&:hover {
-			@apply text-accent-200;
-			@apply border-accent-200;
+			@apply text-accent-300;
+			@apply border-accent-300;
 		}
 	}
 }

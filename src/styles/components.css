@@ -31,7 +31,7 @@
 		@apply px-4;
 		@apply py-2;
 		@apply w-full;
-		@apply max-w-xs;
+		@apply max-w-sm;
 	}
 }
 @layer utilities {
@@ -45,7 +45,7 @@
 	}
 	button.inline-button:hover {
 		transform: translateY(-10%);
-		box-shadow: 0 0.25em 0.2em var(--color-wash-200);
+		box-shadow: 0 0.25em 0em var(--color-wash-300);
 		position: relative;
 	}
 	.link,
@@ -53,7 +53,7 @@
 		position: relative;
 		&:hover,
 		&:focus {
-			@apply text-accent-100;
+			@apply text-accent-300;
 			&:before {
 				width: 100%;
 				left: 0em;

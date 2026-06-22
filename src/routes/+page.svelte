@@ -37,24 +37,22 @@
 </script>
 
 <Navigator />
-<Sidebar />
+<!-- <Sidebar /> -->
 <main>
 	<Section img="ts-bg-tile.svg" bg="light" style="h-dvh relative">
 		<div class="full-width grid place-content-center h-[80vh]">
 			<!-- overflow-clip -->
 			<!-- bg-secondary-200 bg-blend-lighten -->
 			<div use:intersection class:show={hasLoaded} class="hero bg-center bg-cover max-w-full"></div>
-			<!-- <div class="flex justify-end content-grid absolute bottom-24 w-full">
-				<h3
-					class="text-3xl md:text-6xl breakout text-right font-tertiary text-prime-200 inline-block tracking-wider"
-				>
-					pick it up!
-				</h3>
-			</div> -->
 		</div>
 	</Section>
 	<Section bg="dark">
-		<div class="breakout text-2xl font-light">
+		<div class="flex justify-center w-full wide">
+			<h2 class="text-3xl md:text-6xl text-prime-300 breakout font-tertiary uppercase font-thin">
+				A hybrid games studio crafting the future of physical and digital play
+			</h2>
+		</div>
+		<!-- <div class="breakout text-2xl font-light">
 			<p>
 				The only thing to rival our devotion to fun is a lifelong passion for games; video games,
 				arcade games, tabletop games, carnival games...
@@ -75,110 +73,62 @@
 				> <strong>ka-booms:</strong> games that fuse the best use of what we love in ways that bring us
 				together.
 			</p>
-			<!-- Accessible, tactile, and, most importantly, screen-less. -->
-		</div>
+		</div> -->
 	</Section>
 	<Section bg="light">
-		<div
-			data-effect
-			use:intersection
-			class="breakout flex flex-col text-6xl md:text-8xl font-primary px-8"
-		>
-			<span>IMMEDIATE.</span>
-			<span>TACTILE.</span>
-			<span>SCREEN-LESS.</span>
-		</div>
-	</Section>
-	<Section img="ts-bg-tile.svg" bg="dark" paddingTop={true}>
-		<div
-			// use:inView
-			// data-view="translate-scrollY"
-			class="breakout text-2xl font-light flex flex-col gap-16 relative"
-		>
-			<div
-				class="grid grid-cols-1 text-prime-100 bg-secondary-wash px-4 md:px-0 [&>p]:px-4 md:[&>p]:px-8 [&>p]:py-8 [&>p]:h-max [&>p]:backdrop-blur-xs [&>p]:rounded-2xl"
-			>
-				<p class="border-2 font-primary font-bold text-2xl md:text-4xl tracking-wider">
-					<span class="inline-block"><Icon ctx="ts-rainbow" colour="transparent" /></span> Inspired
-					by builders and makers of the DIY aesthetic
-					<span class="inline-block"><Icon ctx="ts-saw" colour="transparent" /></span> to bring you
-					games with digital
-					<span class="inline-block"><Icon ctx="ts-plug" colour="transparent" /></span> elements to your
-					table top...
-				</p>
-			</div>
-			<div
-				class="grid grid-cols-1 lg:grid-cols-2 px-4 md:px-0 gap-8 [&>p]:px-4 md:[&>p]:px-8 [&>p]:py-6 [&>p]:backdrop-blur-xs [&>p]:rounded-2xl"
-			>
-				<p class="bg-prime-300 text-prime-100 rotate-2" style="">
-					With our engineering and design workflows, we work with local manufacturers to bring
-					quality products, far far away from an AI generated landscape. <span
-						class="absolute text-right"><Icon ctx="ts-robot" colour="transparent" size="2" /></span
-					>
-				</p>
-
-				<p
-					style="background-color: var(--hue-5);"
-					class="self-end text-prime-100 text-lg md:text-2xl"
+		<div class="breakout text-xl">
+			<h3 class="font-primary text-3xl mb-12">
+				In a world obsessed with digital-only experiences, we’re doubling down on the physical and
+				building connected play experiences.
+			</h3>
+			<p>
+				From electronic games that hum with life, and strategic card games you can feel in your
+				hands, to digital companions designed to enhance them.
+			</p>
+			<p>
+				We’re a pre-launch studio with three games currently in active development. Follow our
+				journey by joining our Discord for all the latest news and updates.
+			</p>
+			<div class="flex justify-between mt-12">
+				<a
+					href="https://subscribe.techsup.uk"
+					class="justify-center border-b-4 flex items-center gap-4 btn-primary border-2 bg-secondary-100"
+					><Icon ctx="mail" /> Subscribe for more info</a
 				>
-					We look forward to hearing from you via the hotline. <span class="inline-block"
-						><Icon ctx="ts-hotline" colour="transparent" /></span
-					><span class="inline-block"><Icon ctx="ts-eyes" colour="transparent" /></span>
-				</p>
-			</div>
-
-			{#if !isMobile.current}
-				<!-- <div class="full-width relative"> -->
-				<!-- <svg
-					class="absolute inset-0 -z-10"
-					use:spiralise={{ numRings: 16, numWaves: 5 }}
-					width="100%"
-					height="100%"
-				></svg> -->
-				<!-- </div> -->
-			{/if}
-			<div class="breakout w-full text-secondary relative overflow-hidden">
-				<p class="font-light text-4xl text-center">Something is coming...</p>
-				<h2 class="text-center text-6xl">SOOOOOOOOON</h2>
-				<!-- <p class="text-center font-light italic text-xl">Pong but with lazers.</p>
-			<svg
-				class="custom-drop"
-				width="100%"
-				height="50vh"
-				fill="#003727"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			>
-				<use href="sprites.svg#icon-koleider-logo-mono"></use>
-			</svg>
-			{#if isMobile.current}
-				<svg
-					class="absolute top-1/4 left-0"
-					use:spiralise={{ numRings: 12, numWaves: 2 }}
-					width="100%"
-					height="50dvh"
-				></svg>
-			{/if} -->
+				<a
+					href="https://discord.gg/c3ZBmZpGs3"
+					class="flex justify-center items-center gap-4 btn-primary border-2 border-b-4 bg-secondary-100"
+					><Icon ctx="discord" /> Say hi in our Discord</a
+				>
 			</div>
 		</div>
 	</Section>
 
+	<Section img="ts-bg-tile.svg" bg="dark" paddingTop={true}>
+		<div class="breakout w-full text-secondary relative overflow-hidden">
+			<h2 class="text-6xl">Keep an eye out</h2>
+			<p class="font-light font-tertiary text-4xl text-center">Something is coming...</p>
+			<h3 class="text-right text-6xl">SOOOOOOOOON</h3>
+		</div>
+	</Section>
+
 	<Section bg="light">
-		<div class="breakout text-lg font-light">
-			<p class="text-xl font-light">
+		<div class="breakout">
+			<p class="text-xl">
 				Our guiding light is fun that's social: shared, physical, human. It should all bring us
 				together, help us connect, and amplify the things we all have in common, however unique.
 			</p>
 		</div>
 	</Section>
 </main>
-<button
+
+<!-- <button
 	data-action="close-chat"
 	onclick={() => global.toggleSidebar()}
 	class="fixed bg-black z-1 border-2 border-white drop-shadow-2xl"
 >
 	<Icon ctx="x" colour="white" />
-</button>
+</button> -->
 
 <style>
 	.bg-secondary-wash {

@@ -5,20 +5,20 @@
 </script>
 
 <dialog bind:this={modalRef} class="shadow-xl rounded-2xl fixed overflow-hidden">
-	<div class="modal rainbow flex flex-col justify-between p-4 md:p-8">
+	<div class="modal flex flex-col justify-between p-4 md:p-8 fob">
 		<!-- <div class="rounded-lg fob bg-center bg-contain bg-blend-overlay max-w-full"></div> -->
 		<!-- <div class="p-4 grid place-content-center h-full w-full"> -->
 		<!-- <div class="rounded-lg fob bg-center bg-contain bg-blend-screen max-w-full"></div> -->
-		<div
+		<!-- <div
 			class="hidden md:block rounded-lg fob bg-center bg-contain bg-blend-screen max-w-full"
-		></div>
+		></div> -->
 		<!-- <div class="flex justify-center"></div> -->
 		<div class="flex justify-end">
 			<button
 				onclick={() => modalRef.close()}
-				class="fixed text-2xl bg-black z-1 rounded-full border-2 border-white drop-shadow-2xl p-2"
+				class="fixed text-2xl bg-secondary-200 z-1 rounded-full border-2 border-black drop-shadow-2xl p-2"
 			>
-				<Icon ctx="x" colour="white" />
+				<Icon ctx="x" colour="black" />
 			</button>
 		</div>
 		<h2 class="text-3xl md:text-6xl mb-0 text-red-500 text-center text-shadow-2xs">
@@ -29,10 +29,12 @@
 			<Subscribe>
 				<p class="text-center">Or reach out directly:</p>
 				<div class="flex gap-4 items-center justify-center text-lg md:text-2xl">
-					<Icon ctx="mail" />
+					<!-- <Icon ctx="mail" /> -->
 					<a class="link" href="mailto:hello@techsup.uk">
-						<span class="inline-block"><Icon ctx="ts-wave" colour="transparent" /></span><span>
-							hello @ techsup.uk</span
+						<span class="inline-block"><Icon ctx="ts-wave" colour="transparent" /></span><span
+							class="ml-4"
+						>
+							hello@techsup.uk</span
 						>
 					</a>
 				</div>
@@ -52,21 +54,23 @@
 		/* font-weight: bold; */
 	}
 	.fob {
-		top: calc(50% - 5em);
-		left: 0;
-		transform-origin: center;
-		transform: rotate(-12deg);
-		/* background-color: var(b); */
-		box-shadow: 0 1em 0.1em red;
-		/* background-color: #003c2b; */
 		width: 100%;
-		height: 10em;
-		position: absolute;
-		background-image: url('/techsup.jpg');
-		background-size: 22vh;
-		z-index: 0;
-		/* opacity: 0.0512; */
-		/* background-repeat: no-repeat; */
+		position: relative;
+		&:before {
+			inset: 0;
+			content: '';
+			top: -25%;
+			left: -25%;
+			transform-origin: center;
+			transform: rotate(-6deg);
+			width: 150%;
+			height: 150%;
+			position: absolute;
+			background-image: url('/techsup.jpg');
+			background-size: 29vw;
+			z-index: 0;
+			/* opacity: 0.0512; */
+		}
 	}
 	a:hover,
 	a:focus {
