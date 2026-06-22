@@ -1,0 +1,24 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+      - HOST=0.0.0.0
+      - PORT=3000
+    ports:
+      - "0.0.0.0:8001:3000"
+    networks:
+      - dokploy-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.TSU.rule=Host(`app.techsup.uk`)"
+      - "traefik.http.routers.TSU.entrypoints=websecure"
+      - "traefik.http.routers.TSU.tls.certresolver=letsencrypt"
+      - "traefik.http.services.TSU.loadbalancer.server.port=3000"
+
+networks:
+  dokploy-network:
+    external: true
+    name: dokploy-network
