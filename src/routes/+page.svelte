@@ -97,12 +97,12 @@
 				<a
 					href="https://subscribe.techsup.uk"
 					class="justify-center border-b-4 flex items-center gap-4 btn-primary border-2 bg-secondary-100"
-					><Icon ctx="mail" /> Subscribe for more info</a
+					><Icon ctx="mail" />Subscribe for more info</a
 				>
 				<a
 					href="https://discord.gg/c3ZBmZpGs3"
 					class="flex justify-center items-center gap-4 btn-primary border-2 border-b-4 bg-secondary-100"
-					><Icon ctx="discord" /> Say hi in our Discord</a
+					><Icon ctx="discord" />Say hi in our Discord</a
 				>
 			</div>
 		</div>
