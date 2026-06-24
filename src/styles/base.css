@@ -1,8 +1,6 @@
 @layer base {
 	body {
-		color: var(--color-prime-300);
-		@apply font-secondary;
-		@apply bg-primary;
+		@apply bg-primary font-primary text-wash-300;
 		word-wrap: break-word;
 		overflow-wrap: break-word;
 	}
@@ -30,7 +28,6 @@
 	h4,
 	h5,
 	h6 {
-		@apply font-primary;
 		@apply font-bold;
 		@apply mb-4;
 	}
@@ -49,11 +46,11 @@
 		@apply border-b-2;
 		@apply border-inherit;
 		&.active {
-			@apply border-accent-200;
+			@apply border-secondary-300;
 		}
 		&:hover {
-			@apply text-accent-300;
-			@apply border-accent-300;
+			@apply text-secondary-300;
+			@apply border-secondary-300;
 		}
 	}
 }

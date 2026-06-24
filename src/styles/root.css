@@ -4,7 +4,7 @@
 	--hue-3: #d9d4e7;
 	--hue-4: #a786df;
 	--hue-5: #0e172c;
-	--hue-6: #fffffe;
+	--hue-6: #fbfefb;
 	--hue-7: #131225;
 	--hue-8: #43c2c0;
 
@@ -21,6 +21,8 @@
 	--pop: oklch(from var(--hue-6) l c h);
 	--dark: oklch(from var(--hue-5) l c h);
 	--header: #f0ffffef;
+	--black: var(--hue-7);
+	--white: var(--hue-6);
 
 	--color-wash-100: oklch(from var(--wash) calc(l + 0.2) c h);
 	--color-wash-200: oklch(from var(--wash) l c h);
@@ -49,11 +51,11 @@
 	--color-neutral-100: oklch(from var(--neutral) calc(l + 0.2) c h);
 	--color-neutral-200: oklch(from var(--neutral) l c h);
 	--color-neutral-300: oklch(from var(--neutral) calc(l - 0.2) c h);
-	--black: var(--hue-7);
 }
 
 @theme {
 	--color-black: var(--black);
+	--color-white: var(--white);
 	--color-primary: var(--color-prime-300);
 	--color-secondary: var(--color-dark-200);
 	--color-wash-100: var(--color-wash-100);

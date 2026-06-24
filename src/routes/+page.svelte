@@ -7,14 +7,15 @@
 	import { inView } from '$lib/utils/action.InterTranslate.svelte';
 	import { spiralise } from '$lib/utils/action.spiral.svelte';
 	import { MediaQuery } from 'svelte/reactivity';
-
+	import TiledSection from '$lib/components/TiledSection.svelte';
+	import TU from '$lib/assets/TechSup-Logo-Full-3D.svg?raw';
 	let isMobile = new MediaQuery('max-width: 768px');
 	let hasLoaded = $state(false);
-	$effect(() => {
-		const hero = new Image();
-		hero.onload = () => (hasLoaded = true);
-		hero.src = '/techsup.jpg';
-	});
+	// $effect(() => {
+	// 	const hero = new Image();
+	// 	hero.onload = () => (hasLoaded = true);
+	// 	hero.src = '/techsup.jpg';
+	// });
 	function intersection(el) {
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -39,57 +40,60 @@
 <Navigator />
 <!-- <Sidebar /> -->
 <main>
-	<Section img="ts-bg-tile.svg" bg="light" style="h-dvh relative">
+	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize="40vw">
 		<div class="full-width grid place-content-center h-[80vh]">
-			<!-- overflow-clip -->
-			<!-- bg-secondary-200 bg-blend-lighten -->
-			<div use:intersection class:show={hasLoaded} class="hero bg-center bg-cover max-w-full"></div>
+			<div class="hero z-10 inset-0">
+				{@html TU}
+			</div>
 		</div>
-	</Section>
+	</TiledSection>
+
 	<Section bg="dark">
 		<div class="flex justify-center w-full wide">
-			<h2 class="text-3xl md:text-6xl text-prime-300 breakout font-tertiary uppercase font-thin">
-				A hybrid games studio crafting the future of physical and digital play
+			<h2 class="text-3xl md:text-4xl text-prime-300 breakout uppercase font-thin">
+				A HYBRID GAMES STUDIO CRAFTING CONNECTED PLAY
 			</h2>
 		</div>
-		<!-- <div class="breakout text-2xl font-light">
-			<p>
-				The only thing to rival our devotion to fun is a lifelong passion for games; video games,
-				arcade games, tabletop games, carnival games...
-			</p>
-		</div>
-		<div
-			use:intersection
-			data-slam
-			class="font-primary text-4xl md:text-8xl breakout text-center overflow-clip"
-		>
-			IF IT ENDS IN 'GAME'<span>WE'RE IN!</span>
-		</div>
-		<div class="breakout text-2xl font-light">
-			<p>
-				Lucky for us, it's a rivalry straining with explosive potential. What does that mean? It
-				means we're priming <span class="inline-block"
-					><Icon ctx="ts-kaboom" colour="transparent" /></span
-				> <strong>ka-booms:</strong> games that fuse the best use of what we love in ways that bring us
-				together.
-			</p>
-		</div> -->
 	</Section>
-	<Section bg="light">
-		<div class="breakout text-xl">
-			<h3 class="font-primary text-3xl mb-12">
-				In a world obsessed with digital-only experiences, we’re doubling down on the physical and
-				building connected play experiences.
+	<TiledSection bg="bg-prime-200" color="var(--color-wash-100)" tileSize="40vw">
+		<div class="grid place-content-center">
+			<div
+				class="flex flex-col gap-8 [&>p]:bg-white [&>p]:p-8 [&>p]:text-center [&>p]:text-2xl [&>p]:font-bold"
+			>
+				<p class="">IN A WORLD OBSESSED WITH ALGORITHMS AND INTERFACES...</p>
+				<p class="">...WE'RE DOUBLING DOWN ON THE PHYSICAL.</p>
+			</div>
+		</div>
+	</TiledSection>
+	<Section bg="dark">
+		<div class="breakout flex justify-center w-full wide">
+			<h3 class="text-prime-300 breakout">
+				Tech Support! is a pre-launch studio with three games currently in active development. Our
+				mission is simple: create fun that's shared, physical, human.
 			</h3>
-			<p>
-				From electronic games that hum with life, and strategic card games you can feel in your
-				hands, to digital companions designed to enhance them.
-			</p>
-			<p>
-				We’re a pre-launch studio with three games currently in active development. Follow our
-				journey by joining our Discord for all the latest news and updates.
-			</p>
-			<div class="flex justify-between mt-12">
+		</div>
+	</Section>
+	<TiledSection bg="bg-prime-200" color="var(--color-wash-100)" tileSize="40vw">
+		<div class="grid place-content-center">
+			<div
+				class="flex flex-col gap-8 [&>p]:bg-white [&>p]:p-8 [&>p]:text-center [&>p]:text-2xl [&>p]:font-bold"
+			>
+				<p class="">FROM ELECTRONIC GAMES MADE WITH NATURAL MATERIALS...</p>
+				<p class="">TO CARD GAMES ENHANCED BY DIGITAL COMPANIONS.</p>
+			</div>
+		</div>
+	</TiledSection>
+	<Section bg="dark">
+		<div class="breakout flex justify-center w-full wide">
+			<h3 class="text-prime-300 breakout">
+				We're not quite ready to reveal our hand yet, but why not subscribe to follow our journey
+				and stay dialled-in to updates!
+			</h3>
+		</div>
+	</Section>
+	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize="40vw">
+		<div class="full-width">
+			<div class="flex justify-center gap-16 py-16 text-2xl">
 				<a
 					href="https://subscribe.techsup.uk"
 					class="justify-center border-b-4 flex items-center gap-4 btn-primary border-2 bg-secondary-100"
@@ -102,24 +106,7 @@
 				>
 			</div>
 		</div>
-	</Section>
-
-	<Section img="ts-bg-tile.svg" bg="dark" paddingTop={true}>
-		<div class="breakout w-full text-secondary relative overflow-hidden">
-			<h2 class="text-6xl">Keep an eye out</h2>
-			<p class="font-light font-tertiary text-4xl text-center">Something is coming...</p>
-			<h3 class="text-right text-6xl">SOOOOOOOOON</h3>
-		</div>
-	</Section>
-
-	<Section bg="light">
-		<div class="breakout">
-			<p class="text-xl">
-				Our guiding light is fun that's social: shared, physical, human. It should all bring us
-				together, help us connect, and amplify the things we all have in common, however unique.
-			</p>
-		</div>
-	</Section>
+	</TiledSection>
 </main>
 
 <!-- <button
@@ -131,10 +118,12 @@
 </button> -->
 
 <style>
-	.bg-secondary-wash {
-		/* background-color: #01372796; */
-		p {
-			background-color: var(--hue-5);
+	.btn-primary {
+		background-color: var(--white);
+		&:hover {
+			background-color: var(--color-wash-200);
+			border-color: var(--color-wash-300);
+			color: var(--color-white);
 		}
 	}
 	button[data-hover='Coming soon'] {
@@ -214,7 +203,7 @@
 	}
 
 	.hero.show {
-		background-image: url('/TU.png');
+		/* background-image: url('/TU.png'); */
 		background-size: 80%;
 		background-position-y: 70%;
 		opacity: 1;
@@ -222,29 +211,13 @@
 		transform: rotate(0deg) scale(1);
 	}
 	.hero {
-		transition:
-			opacity 0.3s ease 0s,
-			filter 0.3s ease 0.2s,
-			transform 0.3s ease 0.2s;
-		transform: rotate(360deg) scale(0.25);
 		transform-origin: center;
-		opacity: 0;
-		filter: blur(1em);
 		max-height: 80dvh;
 		aspect-ratio: 9/3;
-		width: 100vw;
-		background-repeat: no-repeat;
+		width: 80vw;
 		@media (min-width: 768px) {
 			aspect-ratio: 4/3;
 		}
-	}
-	.rainbow {
-		background: linear-gradient(to right, red, orange, yellow, green, rgb(93, 93, 242), violet);
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		/* font-size: 2rem; */
-		/* font-weight: bold; */
 	}
 
 	main {

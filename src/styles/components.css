@@ -26,12 +26,7 @@
 }
 @layer utilities {
 	.btn-primary {
-		@apply mt-4;
-		@apply rounded-lg;
-		@apply px-4;
-		@apply py-2;
-		@apply w-full;
-		@apply max-w-sm;
+		@apply mt-4 w-full max-w-sm rounded-lg px-4 py-2;
 	}
 }
 @layer utilities {
@@ -53,7 +48,7 @@
 		position: relative;
 		&:hover,
 		&:focus {
-			@apply text-accent-300;
+			@apply text-prime-300;
 			&:before {
 				width: 100%;
 				left: 0em;

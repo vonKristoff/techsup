@@ -2,7 +2,7 @@
 	class="w-full grid grid-cols-1 gap-y-16 md:grid-cols-3 py-16 px-8 md:px-16 text-2xl text-primary"
 >
 	<aside class="flex flex-col text-sm justify-between">
-		<div class="flex flex-col">
+		<div class="flex flex-col [&>a]:text-wash-300">
 			<a class="link w-fit" href="https://feedback.techsup.uk">Feedback</a>
 			<a class="link w-fit" href="https://subscribe.techsup.uk">Subscribe</a>
 			<a class="link w-fit" href="https://unsubscribe.techsup.uk">Unsubscribe</a>
@@ -21,7 +21,7 @@
 	<aside class="flex flex-col text-right text-text-200 text-sm justify-end text-wash-300">
 		<span>Built by humans</span>
 		<a href="https://threejjjs.xyz">
-			<h5 class="text-right text-text-200 text-xl md:text-3xl font-secondary m-0">
+			<h5 class="text-right text-text-200 text-xl md:text-3xl font-tertiary m-0">
 				three<span class="text-pop-200">jjj</span>s
 				<br />
 			</h5>
@@ -31,6 +31,9 @@
 </footer>
 
 <style>
+	a.link:hover {
+		color: var(--white);
+	}
 	footer {
 		color: var(--color-neutral-100);
 		/* background-color: #f0c2d4; */
