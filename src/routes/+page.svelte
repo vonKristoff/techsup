@@ -50,12 +50,12 @@
 
 	<Section bg="dark">
 		<div class="flex justify-center w-full wide">
-			<h2 class="text-3xl md:text-4xl text-prime-300 breakout uppercase font-thin">
+			<h2 class="text-3xl md:text-4xl text-white breakout uppercase">
 				A HYBRID GAMES STUDIO CRAFTING CONNECTED PLAY
 			</h2>
 		</div>
 	</Section>
-	<TiledSection bg="bg-prime-200" color="var(--color-wash-100)" tileSize="40vw">
+	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize="40vw">
 		<div class="grid place-content-center">
 			<div
 				class="flex flex-col gap-8 [&>p]:bg-white [&>p]:p-8 [&>p]:text-center [&>p]:text-2xl [&>p]:font-bold"
@@ -67,13 +67,13 @@
 	</TiledSection>
 	<Section bg="dark">
 		<div class="breakout flex justify-center w-full wide">
-			<h3 class="text-prime-300 breakout">
+			<h3 class="text-white breakout">
 				Tech Support! is a pre-launch studio with three games currently in active development. Our
 				mission is simple: create fun that's shared, physical, human.
 			</h3>
 		</div>
 	</Section>
-	<TiledSection bg="bg-prime-200" color="var(--color-wash-100)" tileSize="40vw">
+	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize="40vw">
 		<div class="grid place-content-center">
 			<div
 				class="flex flex-col gap-8 [&>p]:bg-white [&>p]:p-8 [&>p]:text-center [&>p]:text-2xl [&>p]:font-bold"
@@ -85,7 +85,7 @@
 	</TiledSection>
 	<Section bg="dark">
 		<div class="breakout flex justify-center w-full wide">
-			<h3 class="text-prime-300 breakout">
+			<h3 class="text-white breakout">
 				We're not quite ready to reveal our hand yet, but why not subscribe to follow our journey
 				and stay dialled-in to updates!
 			</h3>

@@ -20,7 +20,7 @@
 		tile = false,
 		margin = { top: 0, bottom: '-99%', left: 0, right: 0 }
 	}: Props = $props();
-	let layout = $state<string>('bg-wash-100');
+	let layout = $state<string>('bg-wash-200');
 	let el: HTMLElement;
 	let steps = 100;
 	let percent = $state(0);
