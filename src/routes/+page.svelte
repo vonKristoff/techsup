@@ -35,12 +35,13 @@
 			}
 		});
 	});
+	const scaler = 'calc(150vw - 110vw * clamp(0, (100vw - 400px) / 368px, 1))';
 </script>
 
 <Navigator />
 <!-- <Sidebar /> -->
 <main>
-	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize="40vw">
+	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize={scaler}>
 		<div class="full-width grid place-content-center h-[80vh]">
 			<div class="hero z-10 inset-0">
 				{@html TU}
@@ -49,19 +50,21 @@
 	</TiledSection>
 
 	<Section bg="dark">
-		<div class="flex justify-center w-full wide">
-			<h2 class="text-3xl md:text-4xl text-white breakout uppercase">
+		<div class="flex justify-center w-full wide px-8">
+			<h2
+				class="text-3xl md:text-4xl text-white breakout uppercase font-thin md:font-normal text-center"
+			>
 				A HYBRID GAMES STUDIO CRAFTING CONNECTED PLAY
 			</h2>
 		</div>
 	</Section>
-	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize="40vw">
+	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize={scaler}>
 		<div class="grid place-content-center">
 			<div
-				class="flex flex-col gap-8 [&>p]:bg-white [&>p]:p-8 [&>p]:text-center [&>p]:text-2xl [&>p]:font-bold"
+				class="flex flex-col gap-0 md:gap-8 [&>p]:bg-white [&>p]:p-8 [&>p]:text-center [&>p]:text-2xl [&>p]:font-bold [&>p]:m-0"
 			>
-				<p class="">IN A WORLD OBSESSED WITH ALGORITHMS AND INTERFACES...</p>
-				<p class="">...WE'RE DOUBLING DOWN ON THE PHYSICAL.</p>
+				<p>IN A WORLD OBSESSED WITH ALGORITHMS AND INTERFACES...</p>
+				<p>...WE'RE DOUBLING DOWN ON THE PHYSICAL.</p>
 			</div>
 		</div>
 	</TiledSection>
@@ -73,10 +76,10 @@
 			</h3>
 		</div>
 	</Section>
-	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize="40vw">
+	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize={scaler}>
 		<div class="grid place-content-center">
 			<div
-				class="flex flex-col gap-8 [&>p]:bg-white [&>p]:p-8 [&>p]:text-center [&>p]:text-2xl [&>p]:font-bold"
+				class="flex flex-col gap-0 md:gap-8 [&>p]:bg-white [&>p]:p-8 [&>p]:text-center [&>p]:text-2xl [&>p]:font-bold [&>p]:m-0"
 			>
 				<p class="">FROM ELECTRONIC GAMES MADE WITH NATURAL MATERIALS...</p>
 				<p class="">TO CARD GAMES ENHANCED BY DIGITAL COMPANIONS.</p>
@@ -91,9 +94,11 @@
 			</h3>
 		</div>
 	</Section>
-	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize="40vw">
+	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize={scaler}>
 		<div class="full-width">
-			<div class="flex justify-center gap-16 py-16 text-2xl">
+			<div
+				class="flex flex-col md:flex-row px-8 justify-center items-center gap-8 md:gap-16 py-8 md:py-16 text-xl md:text-2xl"
+			>
 				<a
 					href="https://subscribe.techsup.uk"
 					class="justify-center border-b-4 flex items-center gap-4 btn-primary border-2 bg-secondary-100"

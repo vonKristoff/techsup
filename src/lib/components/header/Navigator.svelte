@@ -22,9 +22,9 @@
 	</aside>
 	<nav class="grow">
 		<div
-			class="inset-0 static md:absolute items-center text-sm sm:text-xl lg:text-4xl md:flex gap-2 justify-center pointer-none"
+			class="inset-0 static md:absolute items-center text-xl lg:text-4xl md:flex gap-2 justify-center pointer-none"
 		>
-			<div class="flex justify-center font-primary">LAUNCHING SOON</div>
+			<div class="flex justify-center font-primary font-bold md:font-thin">LAUNCHING SOON</div>
 		</div>
 	</nav>
 	<aside class="shrink-0 flex items-center text-md md:text-xl lg:text-2xl px-2 py-2">
