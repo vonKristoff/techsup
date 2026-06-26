@@ -6,6 +6,7 @@
 	import { Sidebar } from '$lib/components/Sidebar';
 	import { inView } from '$lib/utils/action.InterTranslate.svelte';
 	import { spiralise } from '$lib/utils/action.spiral.svelte';
+	import { scrollTrail } from '$lib/utils/action.scrollTrail.svelte';
 	import { MediaQuery } from 'svelte/reactivity';
 	import TiledSection from '$lib/components/TiledSection.svelte';
 	import TU from '$lib/assets/TechSup-Logo-Full-3D.svg?raw';
@@ -43,7 +44,7 @@
 <main>
 	<TiledSection bg="bg-secondary-200" color="var(--color-wash-100)" tileSize={scaler}>
 		<div class="full-width grid place-content-center h-[80vh]">
-			<div class="hero z-10 inset-0">
+			<div use:scrollTrail class="z-10 inset-0 relative overflow-hidden w-[80vw] h-screen">
 				{@html TU}
 			</div>
 		</div>
