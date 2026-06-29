@@ -16,6 +16,10 @@ export function scrollTrail(node: HTMLElement, options: { spacing?: number; scro
 			const clone = svg.cloneNode(true) as SVGElement;
 			clone.removeAttribute('id');
 			clone.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+			clone.querySelectorAll('[fill]').forEach(el => el.removeAttribute('fill'));
+			clone.setAttribute('fill', 'currentColor');
+			clone.setAttribute('stroke', 'white');
+			clone.setAttribute('stroke-width', '0.125em');
 			clone.style.position = 'absolute';
 			clone.style.top = '0';
 			clone.style.left = '0';
